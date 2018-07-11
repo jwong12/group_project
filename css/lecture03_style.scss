@@ -15,14 +15,16 @@ $navHoverColor: lightpink;
 $navFontColor: #5f530d;
 
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: #222;
     font-family: Verdana, sans-serif, Helvetica;
     font-size: 1em;
     line-height: 1.4;
 
     *, *:before, *:after {
-        box-sizing: inherit;
+        -webkit-box-sizing: inherit;
+                box-sizing: inherit;
     }
 }
 
@@ -109,8 +111,12 @@ textarea {
 
 header{    
     #div_header{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content:space-between;
+        -webkit-box-pack:justify;
+            -ms-flex-pack:justify;
+                justify-content:space-between;
         min-width:425px;
 
         a{
@@ -136,8 +142,12 @@ header{
     }
 
     #nav_wrap{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         background-color: $navBgColor;
 
         nav{
@@ -180,6 +190,7 @@ header{
                         visibility: hidden;
                         opacity: 0;
                         position: absolute;
+                        -webkit-transition: all 0.5s ease;
                         transition: all 0.5s ease;
                         margin-top: 5px;
                         left:0;
@@ -188,7 +199,8 @@ header{
                         li {
                             display: block;
                             padding:4px 8px;
-                            transition-duration: 0.5s;
+                            -webkit-transition-duration: 0.5s;
+                                    transition-duration: 0.5s;
                             float: left;
                             position: relative;
                             left:76.83px;
@@ -225,6 +237,8 @@ header{
         }
 
         #search_engine{
+            display:-webkit-box;
+            display:-ms-flexbox;
             display:flex;
 
             form input{
