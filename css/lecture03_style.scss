@@ -10,6 +10,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 $backgroundColor: #000;
+$navBgColor: #b3d4fc;
+$navHoverColor: lightpink;
+$navFontColor: #5f530d;
 
 html {
     box-sizing: border-box;
@@ -135,35 +138,92 @@ header{
     #nav_wrap{
         display: flex;
         justify-content: space-between;
-        background-color: #b3d4fc;
+        background-color: $navBgColor;
 
         nav{
             height:30px;
             // width: 580px;
-            background-color: lightgreen;
+            // background-color: lightgreen;
             // margin: auto;  //centered nav bar
             
-
             ul{
                 margin:0px;
                 padding:0px;
                 list-style-type: none;
     
                 li{
-                    padding:3px 15px 0px;
+                    padding:3px 15px 5px;
                     float:left;
                     
+                    &:hover,
+                    &:focus-within{
+                        height:30px;
+                        background: $navHoverColor;
+                        cursor: pointer;
+                    }
+
+                    &:focus-within a{
+                        outline: none;
+                    }
+
                     a:link{
+                        color: $navFontColor;
                         text-decoration: none;
                         display:inline-block;
                     }
                     
                     a:visited{
+                        color: $navFontColor;
                     }
-                    
+
+                    .dropdown{
+                        visibility: hidden;
+                        opacity: 0;
+                        position: absolute;
+                        transition: all 0.5s ease;
+                        margin-top: 5px;
+                        left:0;
+                        display: none;
+
+                        li {
+                            display: block;
+                            padding:4px 8px;
+                            transition-duration: 0.5s;
+                            float: left;
+                            position: relative;
+                            left:76.83px;
+                            background-color: $navBgColor;
+                            // border: 1px solid black;
+
+                            a{  
+                                text-decoration: none;
+                            }
+                        }
+                           
+                        li:hover {
+                            background: $navHoverColor;
+                            cursor: pointer;
+                        }
+
+                    }
+  
                 } 
+
+                li:hover > ul, 
+                li:focus-within > ul,
+                li ul:hover {
+                    visibility: visible;
+                    opacity: 1;
+                    display: block;
+                }
+                li ul li {
+                    clear: both;
+                    width: 100%;
+                }
             }
+
         }
+
         #search_engine{
             display:flex;
 
@@ -184,6 +244,63 @@ header{
     }
 }
 
+#container {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px;
+    /* Grid Gap - sets spacing between grid elements */
+    /* Grid Gap is shorthand for grid-column-gap and grid-row-gap 	*/
+    /* grid-gap: [row-gap] [column-gap]	*/
+    grid-gap: 2px;	
+
+    .box {
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color:white;
+        font-size: 100px;
+        text-align: center;
+        text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+        padding:10px;
+        background:#1abc9c;
+    }
+}
+
+main{
+    section{
+        h2{
+            background-color: #999;
+            font-size: 19px;
+            margin:0px;
+            padding: 4px 10px;
+            cursor: pointer;
+        }
+
+        h3, h4, h5{
+            margin:10px;
+            font-size: 1.1em;
+        }
+
+        table, form, dl, p{
+            margin:10px;
+        }
+    }
+}
+
+footer{
+    height: 40px;
+    background-color: $navBgColor;
+    padding: 7px 10px;
+
+    a:link{
+        text-decoration: none;
+        font-size: 13px;
+        color: $navFontColor;
+    }
+
+    a:visited{
+        color: $navFontColor;
+    }
+}
 
 
 
@@ -287,15 +404,30 @@ header{
     /* Style adjustments for high resolution devices */
 }
 
-@media (max-width: 750px) {
-    #nav_wrap{
-        nav{
-            
-        }
+@media (max-width: 920px) {
+    #container {
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 200px 200px;
     }
+}
+
+@media (max-width: 750px) {
     #search_engine{
         form input{ display:none; }
         #search_bar img{ display:none; }
+    }
+}
+
+@media (max-width: 620px) {
+    #container {
+        grid-template-columns: 300px;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+    }
+}
+
+@media (max-width: 575px) {
+    #nav_wrap{
+        height:60px;
     }
 }
 
