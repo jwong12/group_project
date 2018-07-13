@@ -522,10 +522,10 @@ footer{
     /* Style adjustments for high resolution devices */
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1000px) {
     #container {
-        grid-template-columns: 300px 300px;
-        grid-template-rows: 200px 200px 200px;
+        grid-template-columns: 325px 325px;
+        grid-template-rows: 260px 260px 260px;
     }
 }
 
@@ -536,10 +536,10 @@ footer{
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 680px) {
     #container {
-        grid-template-columns: 300px;
-        grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        grid-template-columns: 325px;
+        grid-template-rows: 260px 260px 260px 260px 260px 260px;
     }
 }
 
