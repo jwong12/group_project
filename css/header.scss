@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth');
 
 $titles-font: 'Amaranth', sans-serif;
+$externalLinksHover: #abd2fa;
+$externalLinksFont: white;
 
 @mixin transitions ($transition) {
 	-webkit-transition: $transition;  
@@ -44,14 +46,18 @@ h1{
             margin-left: .5em;
         }
         a{
-            color: white;
+            color: $externalLinksHover;
             padding: .5em;
-            border-bottom: .1em solid #fff;
+            border-bottom: .1em solid $externalLinksHover;
             @include transitions(.4s);
+        }
+        a:link, a:visited{
+            color: $externalLinksFont;
         }
         a:hover{
             text-decoration: none;
-            background-color: #fff;
+            color: black;
+            background-color: $externalLinksHover;
         }
     }
 }
@@ -128,7 +134,7 @@ h1{
             font-size: .5em;
         }#some-links{
             a{
-                background-color: #9FA0FF;
+                background-color: $externalLinksHover;
                 padding: .2em;
             }
         }

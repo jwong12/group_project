@@ -37,9 +37,9 @@ h1 {
 }
 
 #banner #some-links a {
-  color: white;
+  color: #abd2fa;
   padding: .5em;
-  border-bottom: .1em solid #fff;
+  border-bottom: 0.1em solid #abd2fa;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -47,9 +47,14 @@ h1 {
   transition: 0.4s;
 }
 
+#banner #some-links a:link, #banner #some-links a:visited {
+  color: white;
+}
+
 #banner #some-links a:hover {
   text-decoration: none;
-  background-color: #fff;
+  color: black;
+  background-color: #abd2fa;
 }
 
 #nav-div {
@@ -124,7 +129,7 @@ h1 {
     font-size: .5em;
   }
   #banner #some-links a {
-    background-color: #9FA0FF;
+    background-color: #abd2fa;
     padding: .2em;
   }
 }

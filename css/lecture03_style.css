@@ -103,7 +103,7 @@ textarea {
   margin: auto;
 }
 
-#container {
+#container_boxes {
   display: grid;
   text-align: center;
   grid-template-columns: 325px 325px 325px;
@@ -114,14 +114,14 @@ textarea {
   grid-gap: 2px;
 }
 
-#container .box {
+#container_boxes .box {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 3px solid #476C9B;
   text-align: left;
   padding: 5px;
 }
 
-#container .box h2 {
+#container_boxes .box h2 {
   color: #5D576B;
   font-size: 19px;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -340,31 +340,16 @@ footer a:visited {
 }
 
 @media (max-width: 1000px) {
-  #container {
+  #container_boxes {
     grid-template-columns: 325px 325px;
     grid-template-rows: 260px 260px 260px;
   }
 }
 
-@media (max-width: 750px) {
-  #search_engine form input {
-    display: none;
-  }
-  #search_engine #search_bar img {
-    display: none;
-  }
-}
-
 @media (max-width: 680px) {
-  #container {
+  #container_boxes {
     grid-template-columns: 325px;
     grid-template-rows: 260px 260px 260px 260px 260px 260px;
-  }
-}
-
-@media (max-width: 575px) {
-  #nav_wrap {
-    height: 60px;
   }
 }
 
