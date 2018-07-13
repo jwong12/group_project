@@ -9,10 +9,20 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-$backgroundColor: #000;
-$navBgColor: #b3d4fc;
-$navHoverColor: lightpink;
-$navFontColor: #5f530d;
+@import url('header.css');
+
+$backgroundColor: #f2f2f2;
+$boxBgColor: #476C9B;
+$codeColor: #5ca6f2;
+$h2HeadingBgColor: #8AC4FF;
+$h2HeadingFontColor: #5D576B;
+// $navBgColor: #b3d4fc;
+// $navHoverColor: lightpink;
+// $navFontColor: #5f530d;
+$footerFontColor: white;
+$footerBgColor: #555;
+
+
 
 html {
     -webkit-box-sizing: border-box;
@@ -109,160 +119,167 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-header{    
-    #div_header{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack:justify;
-            -ms-flex-pack:justify;
-                justify-content:space-between;
-        min-width:425px;
+// header{    
+//     #div_header{
+//         display: -webkit-box;
+//         display: -ms-flexbox;
+//         display: flex;
+//         -webkit-box-pack:justify;
+//             -ms-flex-pack:justify;
+//                 justify-content:space-between;
+//         min-width:425px;
 
-        a{
-            clear:both;
-            img{
-                width: 230px;
-                height: auto;
-            }
-        }
+//         a{
+//             clear:both;
+//             img{
+//                 width: 230px;
+//                 height: auto;
+//             }
+//         }
 
-        #h1_course{
-            font-size: 16px;
-            text-align: end;
-            margin: 5px 10px 0px;
-            width: 290px;
-        }
-    }
+//         #h1_course{
+//             font-size: 16px;
+//             text-align: end;
+//             margin: 5px 10px 0px;
+//             width: 290px;
+//         }
+//     }
 
-    #h1_title{
-        font-size: 26px;
-        margin: 2px 10px;
-        width:382px;
-    }
+//     #h1_title{
+//         font-size: 26px;
+//         margin: 2px 10px;
+//         width:382px;
+//     }
 
-    #nav_wrap{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        background-color: $navBgColor;
+//     #nav_wrap{
+//         display: -webkit-box;
+//         display: -ms-flexbox;
+//         display: flex;
+//         -webkit-box-pack: justify;
+//             -ms-flex-pack: justify;
+//                 justify-content: space-between;
+//         background-color: $navBgColor;
 
-        nav{
-            height:30px;
-            // width: 580px;
-            // background-color: lightgreen;
-            // margin: auto;  //centered nav bar
+//         nav{
+//             height:30px;
+//             // width: 580px;
+//             // background-color: lightgreen;
+//             // margin: auto;  //centered nav bar
             
-            ul{
-                margin:0px;
-                padding:0px;
-                list-style-type: none;
+//             ul{
+//                 margin:0px;
+//                 padding:0px;
+//                 list-style-type: none;
     
-                li{
-                    padding:3px 15px 5px;
-                    float:left;
+//                 li{
+//                     padding:3px 15px 5px;
+//                     float:left;
                     
-                    &:hover,
-                    &:focus-within{
-                        height:30px;
-                        background: $navHoverColor;
-                        cursor: pointer;
-                    }
+//                     &:hover,
+//                     &:focus-within{
+//                         height:30px;
+//                         background: $navHoverColor;
+//                         cursor: pointer;
+//                     }
 
-                    &:focus-within a{
-                        outline: none;
-                    }
+//                     &:focus-within a{
+//                         outline: none;
+//                     }
 
-                    a:link{
-                        color: $navFontColor;
-                        text-decoration: none;
-                        display:inline-block;
-                    }
+//                     a:link{
+//                         color: $navFontColor;
+//                         text-decoration: none;
+//                         display:inline-block;
+//                     }
                     
-                    a:visited{
-                        color: $navFontColor;
-                    }
+//                     a:visited{
+//                         color: $navFontColor;
+//                     }
 
-                    .dropdown{
-                        visibility: hidden;
-                        opacity: 0;
-                        position: absolute;
-                        -webkit-transition: all 0.5s ease;
-                        transition: all 0.5s ease;
-                        margin-top: 5px;
-                        left:0;
-                        display: none;
+//                     .dropdown{
+//                         visibility: hidden;
+//                         opacity: 0;
+//                         position: absolute;
+//                         -webkit-transition: all 0.5s ease;
+//                         transition: all 0.5s ease;
+//                         margin-top: 5px;
+//                         left:0;
+//                         display: none;
 
-                        li {
-                            display: block;
-                            padding:4px 8px;
-                            -webkit-transition-duration: 0.5s;
-                                    transition-duration: 0.5s;
-                            float: left;
-                            position: relative;
-                            left:76.83px;
-                            background-color: $navBgColor;
-                            // border: 1px solid black;
+//                         li {
+//                             display: block;
+//                             padding:4px 8px;
+//                             -webkit-transition-duration: 0.5s;
+//                                     transition-duration: 0.5s;
+//                             float: left;
+//                             position: relative;
+//                             left:76.83px;
+//                             background-color: $navBgColor;
+//                             // border: 1px solid black;
 
-                            a{  
-                                text-decoration: none;
-                            }
-                        }
+//                             a{  
+//                                 text-decoration: none;
+//                             }
+//                         }
                            
-                        li:hover {
-                            background: $navHoverColor;
-                            cursor: pointer;
-                        }
+//                         li:hover {
+//                             background: $navHoverColor;
+//                             cursor: pointer;
+//                         }
 
-                    }
+//                     }
   
-                } 
+//                 } 
 
-                li:hover > ul, 
-                li:focus-within > ul,
-                li ul:hover {
-                    visibility: visible;
-                    opacity: 1;
-                    display: block;
-                }
-                li ul li {
-                    clear: both;
-                    width: 100%;
-                }
-            }
+//                 li:hover > ul, 
+//                 li:focus-within > ul,
+//                 li ul:hover {
+//                     visibility: visible;
+//                     opacity: 1;
+//                     display: block;
+//                 }
+//                 li ul li {
+//                     clear: both;
+//                     width: 100%;
+//                 }
+//             }
 
-        }
+//         }
 
-        #search_engine{
-            display:-webkit-box;
-            display:-ms-flexbox;
-            display:flex;
+//         #search_engine{
+//             display:-webkit-box;
+//             display:-ms-flexbox;
+//             display:flex;
 
-            form input{
-                width:140px;
-                height:20px;
-                margin:5px 2px 0px;
-                font-size: 11px;
-            }
+//             form input{
+//                 width:140px;
+//                 height:20px;
+//                 margin:5px 2px 0px;
+//                 font-size: 11px;
+//             }
 
-            #search_bar img{
-                // -webkit-filter:invert(100%); white color
-                //         filter:invert(100%);
-                width:18px;
-                margin:2px 5px 0px 0px;
-            }
-        }
-    }
+//             #search_bar img{
+//                 // -webkit-filter:invert(100%); white color
+//                 //         filter:invert(100%);
+//                 width:18px;
+//                 margin:2px 5px 0px 0px;
+//             }
+//         }
+//     }
+// }
+
+#body_wrapper{
+    background-color: $backgroundColor;
+    padding:0px 15px;
+    max-width: 1024px;
+    margin: auto;
 }
 
 #container {
     display: grid;
     text-align: center;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 200px 200px;
+    grid-template-columns: 325px 325px 325px;
+    grid-template-rows: 260px 260px;
     /* Grid Gap - sets spacing between grid elements */
     /* Grid Gap is shorthand for grid-column-gap and grid-row-gap 	*/
     /* grid-gap: [row-gap] [column-gap]	*/
@@ -270,19 +287,101 @@ header{
 
     .box {
         font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color:white;
-        font-size: 100px;
-        text-align: center;
-        text-shadow:4px 4px 0 rgba(0,0,0,0.1);
-        padding:10px;
-        background:#1abc9c;
+        border: 3px solid $boxBgColor;
+        text-align: left;
+        padding:5px;
+
+        h2{
+            color: $h2HeadingFontColor;
+            font-size: 19px;
+            text-shadow:4px 4px 0 rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
     }
 }
 
+fieldset {
+    display: inline-block;
+    -webkit-margin-start: 2px;
+    -webkit-margin-end: 2px;
+    -webkit-padding-before: 0.35em;
+    -webkit-padding-start: 0.75em;
+    -webkit-padding-end: 0.75em;
+    -webkit-padding-after: 0.625em;
+    min-width: -webkit-min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    -o-border-image: initial;
+       border-image: initial;
+}
+
+legend{
+    border: 1px solid #ababab;
+    padding: 0px 2px;
+}
+
+code{
+    font-size: 14px;
+    color: $codeColor;
+    font-weight: bold;
+}
+
+#background_image_fixed{
+    background-attachment: fixed;
+    background-image: url(../img/leafer.png);
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+}
+
+.box2{
+    p{
+        margin: 5px;
+    }
+}
+
+#sprite_img{
+    border: 2px dashed dimgray;
+    margin: 5px 10px;
+    padding: 1px;
+}
+
+#sprite_container{
+    display: flex;
+    float: left;
+
+    & + dl{
+        clear:both;
+    }
+}
+
+.sprite { 
+    background: url('../img/sprite.png') no-repeat top left; 
+    width: 48px; 
+    height: 48px;  
+    margin: 5px 12px;
+    border: 1px dashed dimgray;
+} 
+
+.sprite.facebook { background-position: 0 0; } 
+.sprite.spotify { background-position: -58px 0; } 
+.sprite.twitter { background-position: -116px 0; } 
+
 main{
+    ul, ol{
+        margin-top: 10px;
+    }
+
     section{
         h2{
-            background-color: #999;
+            background-color: $h2HeadingBgColor;
+            color: $h2HeadingFontColor;
+            border-radius:8px;
+            -webkit-box-shadow: 3px 3px 10px dimgray;
+                    box-shadow: 3px 3px 10px dimgray;
+            border: 1px solid gray;
             font-size: 19px;
             margin:0px;
             padding: 4px 10px;
@@ -300,19 +399,24 @@ main{
     }
 }
 
+.lecture_content fieldset{
+    margin:10px;
+}
+
 footer{
+    text-align: center;
     height: 40px;
-    background-color: $navBgColor;
+    background-color: $footerBgColor;
     padding: 7px 10px;
 
     a:link{
         text-decoration: none;
         font-size: 13px;
-        color: $navFontColor;
+        color: $footerFontColor;
     }
 
     a:visited{
-        color: $navFontColor;
+        color: $footerFontColor;
     }
 }
 

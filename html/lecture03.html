@@ -16,7 +16,9 @@
 	<!-- Place favicon.ico in the root directory -->
 
 	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/lecture03_style.css">
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -25,226 +27,302 @@
 	<![endif]-->
 
 	<!-- Add your site or application content here -->
-	<header>	
-    	<div id="div_header">
-    		<a href="../index.html"><img src="../img/bcit_logo.png" /></a>
-        	<h1 id="h1_course">COMP1950<br>Web Development And Design 2</h1>
-      	</div>
-		<h1 id="h1_title">Lecture 03: Advanced CSS</h1>
-		<div id="nav_wrap">
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Lectures</a>
-						<ul class="dropdown">
-							<li><a href="#">01: Tools & Standards</a></li>
-							<li><a href="#">02: HTML5</a></li>
-							<li><a href="#">03: Advanced CSS</a></li>
-							<li><a href="#">04: CSS Layouts</a></li>
-							<li><a href="#">05: Responsive Design</a></li>
-							<li><a href="#">06: CSS3</a></li>
-							<li><a href="#">07: Javascript Frameworks</a></li>
-							<li><a href="#">08: Server Architecture</a></li>
-							<li><a href="#">09: Templates, Tools</a></li>
-							<li><a href="#">10: Methodology</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Resources</a></li>
-					<li><a href="#">Useful Links</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-			<div id="search_engine">
-				<form>
-					<input type="text" name="search" placeholder="Search Keyword">
-				</form>
-				<a id="search_bar" href=#><img src="../img/search.svg" alt="search bar"/></a>
+	<!-- <header>	 -->
+    	<div id="banner">
+			<div id="rgba">
+				<div class="container">
+					<header>
+						<br/><br/>
+						<div class="row">
+							<div class="col-xs-3 col-sm-3 col-md-2">
+								<img alt="logo" src="../img/logo.png" />
+							</div>
+							<div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
+								<h1>COMP1950</h1>
+								<p>Web Development And Design 2</p>
+							</div>
+							<div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
+								<ul>
+									<li><a href="#">BCIT</a></li>
+									<li><a href="#">D2L</a></li>
+									<li><a href="#">MyBCIT</a></li>
+								</ul>
+							</div>
+						</div>
+					</header>
+				</div>
 			</div>
 		</div>
-	</header>
-
-	<aside id="container">
-		<div class="box box1">1</div>
-		<div class="box box2">2</div>
-		<div class="box box3">3</div>
-		<div class="box box4">4</div>
-		<div class="box box5">5</div>
-		<div class="box box6">6</div>
-	</aside>
-
-	<main>
-		<section>
-			<h2>CSS Backgrounds</h2>
-			<div class="lecture_content">
-				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-				<h3>Header Level 2</h3>
-	
-				<ol>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-				<li>Aliquam tincidunt mauris eu risus.</li>
-				</ol>
-	
-				<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-	
-				<h3>Header Level 3</h3>
-	
-				<ul>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-				<li>Aliquam tincidunt mauris eu risus.</li>
-				</ul>
+		<div id="nav-div" class="bg-light">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="#"><img alt="logo" src="../img/logo2.png"></a>
+					<button class="navbar-toggler" type="button"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li id="dropdown1" class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"    role="button" data-toggle="dropdown" aria-haspopup="true"         aria-expanded="false">
+								Lectures
+								</a>
+								<div id="menu-dropdown1" class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Session 1</a>
+									<a class="dropdown-item" href="#">Session 2</a>
+									<a class="dropdown-item" href="#">Session 3</a>
+									<a class="dropdown-item" href="#">Session 4</a>
+									<a class="dropdown-item" href="#">Session 5</a>
+									<a class="dropdown-item" href="#">Session 6</a>
+									<a class="dropdown-item" href="#">Session 7</a>
+									<a class="dropdown-item" href="#">Session 8</a>
+									<a class="dropdown-item" href="#">Session 9</a>
+									<a class="dropdown-item" href="#">Session 10</a>
+									<a class="dropdown-item" href="#">Session 11</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Something else here</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Resources</a>
+							</li>
+							<li id="more-dropdown2" class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2"    role="button" data-toggle="dropdown" aria-haspopup="true"         aria-expanded="false">About</a>
+								<div id="menu-dropdown2" class="dropdown-menu dropdown2" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">COMP 1950</a>
+									<a class="dropdown-item" href="#">Instructor</a>
+								</div>
+							</li>
+						</ul>
+						<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+						</form>
+					</div>
+				</nav>
 			</div>
-			
+		</div>
+	<!-- </header> -->
+	<div id="body_wrapper">
+		<aside id="container">
+			<div class="box box1">
+				<h2>CSS Backgrounds</h2>
+				<fieldset>
+					<legend>
+						<code>background-attachment:fixed;</code>
+					</legend>
+					<div id="background_image_fixed"></div>
+				</fieldset>
+			</div>
+			<div class="box box2">
+				<h2>Sprites</h2>
+				<p>sprite image: 1 file</p>
+				<img id ="sprite_img" src="../img/sprite.png">
+				<p>divided into separate images</p>
+				<div id="sprite_container">
+					<div class='sprite facebook'></div>
+					<div class='sprite spotify'></div>
+					<div class='sprite twitter'></div>
+				</div>
+			</div>
+			<div class="box box3">
+				<h2>Font Icons</h2>
 
-		</section>
-		<section>
-			<h2>Sprites</h2>
-			<div class="lecture_content">
-				<dl>
-					<dt>Definition list</dt>
-					<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat.</dd>
-					<dt>Lorem ipsum dolor sit amet</dt>
-					<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-					commodo consequat.</dd>
-				</dl>
 			</div>
-			
-		</section>
-		<section>
-			<h2>Font Icons</h2>
-			<div class="lecture_content">
-				<ul>
-					<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-					<li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-					<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-					<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-				</ul>
+			<div class="box box4">
+				<h2>Box Model Sizing</h2>
 			</div>
-		</section>
-		<section>
-			<h2>CSS Reset</h2>
-			<div class="lecture_content">
-				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			</div>
-		</section>
-		<section>
-			<h2>Box Model Sizing</h2>
-			<div class="lecture_content">
-				<form action="#" method="post">
+			<div class="box box5">5</div>
+			<div class="box box6">6</div>
+		</aside>
+
+		<main>
+			<section id="section_css">
+				<h2>CSS Backgrounds</h2>
+				<div class="lecture_content">
+					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+					<h3>Header Level 2</h3>
+		
+					<ol>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
+					</ol>
+		
+					<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+		
+					<h3>Header Level 3</h3>
+		
+					<ul>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
+					</ul>
 					<fieldset>
-						<label for="name">Name:</label>
-						<input type="text" id="name" placeholder="Enter your 
-					full name" />
-					
-						<label for="email">Email:</label>
-						<input type="email" id="email" placeholder="Enter 
-					your email address" />
-					
-						<label for="message">Message:</label>
-						<textarea id="message" placeholder="What's on your 
-					mind?"></textarea>
-					
-						<input type="submit" value="Send message" />
-					
-					</fieldset>
-				</form>
-			</div>	  
-		</section>
-		<section>
-			<h2>CSS Positioning</h2>
-			<div class="lecture_content">
-				<table class="data">
-					<tr>
-						<th>Entry Header 1</th>
-						<th>Entry Header 2</th>
-						<th>Entry Header 3</th>
-						<th>Entry Header 4</th>
-					</tr>
-					<tr>
-						<td>Entry First Line 1</td>
-						<td>Entry First Line 2</td>
-						<td>Entry First Line 3</td>
-						<td>Entry First Line 4</td>
-					</tr>
-					<tr>
-						<td>Entry Line 1</td>
-						<td>Entry Line 2</td>
-						<td>Entry Line 3</td>
-						<td>Entry Line 4</td>
-					</tr>
-					<tr>
-						<td>Entry Last Line 1</td>
-						<td>Entry Last Line 2</td>
-						<td>Entry Last Line 3</td>
-						<td>Entry Last Line 4</td>
-					</tr>
-				</table>
-			</div>	
-		</section>
-		<section>
-			<h2>Flex Box</h2>
-			<div class="lecture_content">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-					elit. Aenean commodo ligula eget dolor. Aenean massa 
-					<strong>strong</strong>. Cum sociis natoque penatibus 
-					et magnis dis parturient montes, nascetur ridiculus 
-					mus. Donec quam felis, ultricies nec, pellentesque 
-					eu, pretium quis, sem. Nulla consequat massa quis 
-					enim. Donec pede justo, fringilla vel, aliquet nec, 
-					vulputate eget, arcu. In enim justo, rhoncus ut, 
-					imperdiet a, venenatis vitae, justo. Nullam dictum 
-					felis eu pede <a class="external ext" href="#">link</a> 
-					mollis pretium. Integer tincidunt. Cras dapibus. 
-					Vivamus elementum semper nisi. Aenean vulputate 
-					eleifend tellus. Aenean leo ligula, porttitor eu, 
-					consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
-					dapibus in, viverra quis, feugiat a, tellus. Phasellus 
-					viverra nulla ut metus varius laoreet. Quisque rutrum. 
-					Aenean imperdiet. Etiam ultricies nisi vel augue. 
-					Curabitur ullamcorper ultricies nisi.</p>
-			</div>
-		</section>
-		<section>
-			<h2>Grid Layout</h2>
-			<div class="lecture_content">
-				<ul>
-					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-					elit. Aenean commodo ligula eget dolor. Aenean 
-					massa.</li>
-					<li>Cum sociis natoque penatibus et magnis dis 
-					parturient montes, nascetur ridiculus mus. Donec quam 
-					felis, ultricies nec, pellentesque eu, pretium quis, 
-					sem.</li>
-					<li>Nulla consequat massa quis enim. Donec pede justo, 
-					fringilla vel, aliquet nec, vulputate eget, arcu.</li>
-					<li>In enim justo, rhoncus ut, imperdiet a, venenatis 
-					vitae, justo. Nullam dictum felis eu pede mollis 
-					pretium. Integer tincidunt.</li>
-				</ul>
-			</div>
-		</section>
-		<section>
-			<h2>To Do</h2>
-			<div class="lecture_content">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
-				elit. Aenean commodo ligula eget dolor. Aenean massa. 
-				Cum sociis natoque penatibus et magnis dis parturient 
-				montes, nascetur ridiculus mus. Donec quam felis, 
-				ultricies nec, pellentesque eu, pretium quis, sem.</p>
-			</div>
-		</section>
-	</main>
-
+						<legend>
+							<code>background-attachment:fixed;</code>
+						</legend>
+						<div id="background_image_fixed"></div>
+					</fieldset><br><br>
+				</div>
+			</section>
+			<section id="section_sprites">
+				<h2>Sprites</h2>
+				<div class="lecture_content">
+					<p>sprite image: 1 file</p>
+					<img id ="sprite_img" src="../img/sprite.png">
+					<p>divided into separate images</p>
+					<div id="sprite_container">
+						<div class='sprite facebook'></div>
+						<div class='sprite spotify'></div>
+						<div class='sprite twitter'></div>
+					</div>
+					<dl>
+						<br><dt>Definition list</dt>
+						<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+						commodo consequat.</dd>
+						<dt>Lorem ipsum dolor sit amet</dt>
+						<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+						aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+						commodo consequat.</dd>
+					</dl><br>
+				</div>
+				
+			</section>
+			<section id="section_icons">
+				<h2>Font Icons</h2>
+				<div class="lecture_content">
+					<ul>
+						<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+						<li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+						<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+						<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+					</ul><br>
+				</div>
+			</section>
+			<section>
+				<h2>CSS Reset</h2>
+				<div class="lecture_content">
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p><br>
+				</div>
+			</section>
+			<section id="section_box_model">
+				<h2>Box Model Sizing</h2>
+				<div class="lecture_content">
+					<form action="#" method="post">
+						<fieldset>
+							<label for="name">Name:</label>
+							<input type="text" id="name" placeholder="Enter your 
+							full name" />
+						
+							<label for="email">Email:</label>
+							<input type="email" id="email" placeholder="Enter 
+							your email address" />
+						
+							<label for="message">Message:</label>
+							<textarea id="message" placeholder="What's on your 
+							mind?"></textarea>
+						
+							<input type="submit" value="Send message" />
+						
+						</fieldset>
+					</form><br>
+				</div>	  
+			</section>
+			<section>
+				<h2>CSS Positioning</h2>
+				<div class="lecture_content">
+					<table class="data">
+						<tr>
+							<th>Entry Header 1</th>
+							<th>Entry Header 2</th>
+							<th>Entry Header 3</th>
+							<th>Entry Header 4</th>
+						</tr>
+						<tr>
+							<td>Entry First Line 1</td>
+							<td>Entry First Line 2</td>
+							<td>Entry First Line 3</td>
+							<td>Entry First Line 4</td>
+						</tr>
+						<tr>
+							<td>Entry Line 1</td>
+							<td>Entry Line 2</td>
+							<td>Entry Line 3</td>
+							<td>Entry Line 4</td>
+						</tr>
+						<tr>
+							<td>Entry Last Line 1</td>
+							<td>Entry Last Line 2</td>
+							<td>Entry Last Line 3</td>
+							<td>Entry Last Line 4</td>
+						</tr>
+					</table><br>
+				</div>	
+			</section>
+			<section>
+				<h2>Flex Box</h2>
+				<div class="lecture_content">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+						elit. Aenean commodo ligula eget dolor. Aenean massa 
+						<strong>strong</strong>. Cum sociis natoque penatibus 
+						et magnis dis parturient montes, nascetur ridiculus 
+						mus. Donec quam felis, ultricies nec, pellentesque 
+						eu, pretium quis, sem. Nulla consequat massa quis 
+						enim. Donec pede justo, fringilla vel, aliquet nec, 
+						vulputate eget, arcu. In enim justo, rhoncus ut, 
+						imperdiet a, venenatis vitae, justo. Nullam dictum 
+						felis eu pede <a class="external ext" href="#">link</a> 
+						mollis pretium. Integer tincidunt. Cras dapibus. 
+						Vivamus elementum semper nisi. Aenean vulputate 
+						eleifend tellus. Aenean leo ligula, porttitor eu, 
+						consequat vitae, eleifend ac, enim. Aliquam lorem ante, 
+						dapibus in, viverra quis, feugiat a, tellus. Phasellus 
+						viverra nulla ut metus varius laoreet. Quisque rutrum. 
+						Aenean imperdiet. Etiam ultricies nisi vel augue. 
+						Curabitur ullamcorper ultricies nisi.</p><br>
+				</div>
+			</section>
+			<section>
+				<h2>Grid Layout</h2>
+				<div class="lecture_content">
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+						elit. Aenean commodo ligula eget dolor. Aenean 
+						massa.</li>
+						<li>Cum sociis natoque penatibus et magnis dis 
+						parturient montes, nascetur ridiculus mus. Donec quam 
+						felis, ultricies nec, pellentesque eu, pretium quis, 
+						sem.</li>
+						<li>Nulla consequat massa quis enim. Donec pede justo, 
+						fringilla vel, aliquet nec, vulputate eget, arcu.</li>
+						<li>In enim justo, rhoncus ut, imperdiet a, venenatis 
+						vitae, justo. Nullam dictum felis eu pede mollis 
+						pretium. Integer tincidunt.</li>
+					</ul><br>
+				</div>
+			</section>
+			<section>
+				<h2>To Do</h2>
+				<div class="lecture_content">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+					elit. Aenean commodo ligula eget dolor. Aenean massa. 
+					Cum sociis natoque penatibus et magnis dis parturient 
+					montes, nascetur ridiculus mus. Donec quam felis, 
+					ultricies nec, pellentesque eu, pretium quis, sem.</p><br>
+				</div>
+			</section>
+		</main>
+	</div>
 	<footer>
 		<a href="#">Top of Page</a>
 	</footer>
 
 	<script src="../js/vendor/modernizr-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 	<script src="../js/plugins.js"></script>
 	<script src="../js/lecture03_script.js"></script>

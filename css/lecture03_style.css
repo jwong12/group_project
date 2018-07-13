@@ -7,6 +7,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url("header.css");
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -95,150 +96,18 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-header #div_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-width: 425px;
-}
-
-header #div_header a {
-  clear: both;
-}
-
-header #div_header a img {
-  width: 230px;
-  height: auto;
-}
-
-header #div_header #h1_course {
-  font-size: 16px;
-  text-align: end;
-  margin: 5px 10px 0px;
-  width: 290px;
-}
-
-header #h1_title {
-  font-size: 26px;
-  margin: 2px 10px;
-  width: 382px;
-}
-
-header #nav_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background-color: #b3d4fc;
-}
-
-header #nav_wrap nav {
-  height: 30px;
-}
-
-header #nav_wrap nav ul {
-  margin: 0px;
-  padding: 0px;
-  list-style-type: none;
-}
-
-header #nav_wrap nav ul li {
-  padding: 3px 15px 5px;
-  float: left;
-}
-
-header #nav_wrap nav ul li:hover, header #nav_wrap nav ul li:focus-within {
-  height: 30px;
-  background: lightpink;
-  cursor: pointer;
-}
-
-header #nav_wrap nav ul li:focus-within a {
-  outline: none;
-}
-
-header #nav_wrap nav ul li a:link {
-  color: #5f530d;
-  text-decoration: none;
-  display: inline-block;
-}
-
-header #nav_wrap nav ul li a:visited {
-  color: #5f530d;
-}
-
-header #nav_wrap nav ul li .dropdown {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  margin-top: 5px;
-  left: 0;
-  display: none;
-}
-
-header #nav_wrap nav ul li .dropdown li {
-  display: block;
-  padding: 4px 8px;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  float: left;
-  position: relative;
-  left: 76.83px;
-  background-color: #b3d4fc;
-}
-
-header #nav_wrap nav ul li .dropdown li a {
-  text-decoration: none;
-}
-
-header #nav_wrap nav ul li .dropdown li:hover {
-  background: lightpink;
-  cursor: pointer;
-}
-
-header #nav_wrap nav ul li:hover > ul,
-header #nav_wrap nav ul li:focus-within > ul,
-header #nav_wrap nav ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-header #nav_wrap nav ul li ul li {
-  clear: both;
-  width: 100%;
-}
-
-header #nav_wrap #search_engine {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header #nav_wrap #search_engine form input {
-  width: 140px;
-  height: 20px;
-  margin: 5px 2px 0px;
-  font-size: 11px;
-}
-
-header #nav_wrap #search_engine #search_bar img {
-  width: 18px;
-  margin: 2px 5px 0px 0px;
+#body_wrapper {
+  background-color: #f2f2f2;
+  padding: 0px 15px;
+  max-width: 1024px;
+  margin: auto;
 }
 
 #container {
   display: grid;
   text-align: center;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: 325px 325px 325px;
+  grid-template-rows: 260px 260px;
   /* Grid Gap - sets spacing between grid elements */
   /* Grid Gap is shorthand for grid-column-gap and grid-row-gap 	*/
   /* grid-gap: [row-gap] [column-gap]	*/
@@ -247,16 +116,103 @@ header #nav_wrap #search_engine #search_bar img {
 
 #container .box {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
-  font-size: 100px;
-  text-align: center;
+  border: 3px solid #476C9B;
+  text-align: left;
+  padding: 5px;
+}
+
+#container .box h2 {
+  color: #5D576B;
+  font-size: 19px;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  background: #1abc9c;
+  text-align: center;
+}
+
+fieldset {
+  display: inline-block;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+  min-width: -webkit-min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  -o-border-image: initial;
+  border-image: initial;
+}
+
+legend {
+  border: 1px solid #ababab;
+  padding: 0px 2px;
+}
+
+code {
+  font-size: 14px;
+  color: #5ca6f2;
+  font-weight: bold;
+}
+
+#background_image_fixed {
+  background-attachment: fixed;
+  background-image: url(../img/leafer.png);
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+.box2 p {
+  margin: 5px;
+}
+
+#sprite_img {
+  border: 2px dashed dimgray;
+  margin: 5px 10px;
+  padding: 1px;
+}
+
+#sprite_container {
+  display: flex;
+  float: left;
+}
+
+#sprite_container + dl {
+  clear: both;
+}
+
+.sprite {
+  background: url("../img/sprite.png") no-repeat top left;
+  width: 48px;
+  height: 48px;
+  margin: 5px 12px;
+  border: 1px dashed dimgray;
+}
+
+.sprite.facebook {
+  background-position: 0 0;
+}
+
+.sprite.spotify {
+  background-position: -58px 0;
+}
+
+.sprite.twitter {
+  background-position: -116px 0;
+}
+
+main ul, main ol {
+  margin-top: 10px;
 }
 
 main section h2 {
-  background-color: #999;
+  background-color: #8AC4FF;
+  color: #5D576B;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 10px dimgray;
+  box-shadow: 3px 3px 10px dimgray;
+  border: 1px solid gray;
   font-size: 19px;
   margin: 0px;
   padding: 4px 10px;
@@ -272,20 +228,25 @@ main section table, main section form, main section dl, main section p {
   margin: 10px;
 }
 
+.lecture_content fieldset {
+  margin: 10px;
+}
+
 footer {
+  text-align: center;
   height: 40px;
-  background-color: #b3d4fc;
+  background-color: #555;
   padding: 7px 10px;
 }
 
 footer a:link {
   text-decoration: none;
   font-size: 13px;
-  color: #5f530d;
+  color: white;
 }
 
 footer a:visited {
-  color: #5f530d;
+  color: white;
 }
 
 /* ==========================================================================
