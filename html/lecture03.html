@@ -27,30 +27,27 @@
 	<![endif]-->
 
 	<!-- Add your site or application content here -->
-	<!-- <header>	 -->
+	<header>	
     	<div id="banner">
 			<div id="rgba">
 				<div class="container">
-					<header>
-						<br/><br/>
-						<div class="row">
-							<div class="col-xs-3 col-sm-3 col-md-2">
-								<img alt="logo" src="../img/logo.png" />
-							</div>
-							<div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
-								<h1>COMP1950</h1>
-								<p>Web Development And Design 2</p>
-							</div>
-							<div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
-								<ul>
-									<li><a href="http://www.bcit.ca/" target="_blank">BCIT</a></li>
-									
-									<li><a href="http://learn.bcit.ca/" target="_blank">D2L</a></li>
-									<li><a href="http://my.bcit.ca/" target="_blank">MyBCIT</a></li>
-								</ul>
-							</div>
+					<br/><br/>
+					<div class="row">
+						<div class="col-xs-3 col-sm-3 col-md-2">
+							<img alt="logo" src="../img/logo.png" />
 						</div>
-					</header>
+						<div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
+							<h1>COMP1950</h1>
+							<p>Web Development And Design 2</p>
+						</div>
+						<div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
+							<ul>
+								<li><a href="http://www.bcit.ca/" target="_blank">BCIT</a></li>
+								<li><a href="http://learn.bcit.ca/" target="_blank">D2L</a></li>
+								<li><a href="http://my.bcit.ca/" target="_blank">MyBCIT</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -111,7 +108,7 @@
 				</nav>
 			</div>
 		</div>
-	<!-- </header> -->
+	</header>
 	<div id="body_wrapper">
 		<aside id="container_boxes">
 			<div class="box box1">
@@ -126,7 +123,7 @@
 			<div class="box box2">
 				<h2>Sprites</h2>
 				<p>sprite image: 1 file</p>
-				<img id ="sprite_img" src="../img/sprite.png">
+				<img id ="sprite_img" src="../img/lecture03/sprite.png">
 				<p>divided into separate images</p>
 				<div id="sprite_container">
 					<div class='sprite facebook'></div>
@@ -136,20 +133,55 @@
 			</div>
 			<div class="box box3">
 				<h2>Font Icons</h2>
-
+				<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-android" src="../img/lecture03/android.svg" alt="Android Font Icon">Android</a></div><br>
+				<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-app_store" src="../img/lecture03/app_store.svg" alt="App Store Font Icon"> App Store</a></div><br>
+				<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-app_store" src="../img/lecture03/bluetooth.svg" alt="Bluetooth Font Icon">Bluetooth</a></div><br>
 			</div>
 			<div class="box box4">
 				<h2>Box Model Sizing</h2>
+				<p>All boxes have 25% width and 5px padding.</p>
+				<code>box-sizing: content-box;</code>
+				<div class="item_box content_box">Item One</div>
+				<div class="item_box content_box">Item Two</div>
+				<div class="item_box content_box">Item Three</div>
+				<div class="item_box content_box">Item Four</div><br><br>
+
+				<code>box-sizing: border-box;</code>
+				<div class="item_box border_box">Item One</div>
+				<div class="item_box border_box">Item Two</div>
+				<div class="item_box border_box">Item Three</div>
+				<div class="item_box border_box">Item Four</div><br>
 			</div>
-			<div class="box box5">5</div>
-			<div class="box box6">6</div>
+			<div class="box box5">
+				<h2>Flex Box</h2>
+				<div id="flex_container">
+						<div class="flex_box flex1">1</div>
+						<div class="flex_box flex2">2</div>
+						<div class="flex_box flex3">3</div>
+						<div class="flex_box flex6">4</div>
+				</div>
+			</div>
+			<div class="box box6">
+				<h2>Grid Layout</h2>
+				<div id="grid_container">
+					<div class="grid grid1">1</div>
+					<div class="grid grid2">2</div>
+					<div class="grid grid3">3</div>
+					<div class="grid grid4">4</div>
+					<div class="grid grid5">5</div>
+					<div class="grid grid6">6</div>
+					<div class="grid grid7">7</div>
+					<div class="grid grid8">8</div>
+					<div class="grid grid9">9</div>
+				</div>
+			</div>
 		</aside>
 
 		<main>
 			<section id="section_css">
 				<h2>CSS Backgrounds</h2>
 				<div class="lecture_content">
-					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+					<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
 					<h3>Header Level 2</h3>
 		
@@ -178,7 +210,7 @@
 				<h2>Sprites</h2>
 				<div class="lecture_content">
 					<p>sprite image: 1 file</p>
-					<img id ="sprite_img" src="../img/sprite.png">
+					<img id ="sprite_img" src="../img/lecture03/sprite.png">
 					<p>divided into separate images</p>
 					<div id="sprite_container">
 						<div class='sprite facebook'></div>
@@ -206,7 +238,10 @@
 						<li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
 						<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
 						<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-					</ul><br>
+					</ul>
+					<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-android" src="../img/lecture03/android.svg" alt="Android Font Icon">Android</a></div>
+					<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-app_store" src="../img/lecture03/app_store.svg" alt="App Store Font Icon"> App Store</a></div>
+					<div class="svg_wrapper"><a class="svg_a" href="#"><img class="fab fa-app_store" src="../img/lecture03/bluetooth.svg" alt="Bluetooth Font Icon">Bluetooth</a></div><br><br>
 				</div>
 			</section>
 			<section>
@@ -218,60 +253,67 @@
 			<section id="section_box_model">
 				<h2>Box Model Sizing</h2>
 				<div class="lecture_content">
-					<form action="#" method="post">
-						<fieldset>
-							<label for="name">Name:</label>
-							<input type="text" id="name" placeholder="Enter your 
-							full name" />
-						
-							<label for="email">Email:</label>
-							<input type="email" id="email" placeholder="Enter 
-							your email address" />
-						
-							<label for="message">Message:</label>
-							<textarea id="message" placeholder="What's on your 
-							mind?"></textarea>
-						
-							<input type="submit" value="Send message" />
-						
-						</fieldset>
-					</form><br>
+					<code>box-sizing: content-box;<br><br>
+							background-color:#ababab;<br>
+							border:solid 1px black;<br>
+							padding:0px 5px;<br>
+							float:left;<br>
+							width:25%;
+					</code>
+					<div class="item_box content_box">Item One</div>
+					<div class="item_box content_box">Item Two</div>
+					<div class="item_box content_box">Item Three</div>
+					<div class="item_box content_box">Item Four</div><br><br>
+	
+					<code>box-sizing: border-box;<br><br>
+							background-color:#ababab;<br>
+							border:solid 1px black;<br>
+							padding:0px 5px;<br>
+							float:left;<br>
+							width:25%;
+					</code>
+					<div class="item_box border_box">Item One</div>
+					<div class="item_box border_box">Item Two</div>
+					<div class="item_box border_box">Item Three</div>
+					<div class="item_box border_box">Item Four</div><br>
+
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+						elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient 
+						montes, nascetur ridiculus mus. Donec quam felis, 
+						ultricies nec, pellentesque eu, pretium quis, sem.</p>
 				</div>	  
 			</section>
 			<section>
 				<h2>CSS Positioning</h2>
 				<div class="lecture_content">
-					<table class="data">
-						<tr>
-							<th>Entry Header 1</th>
-							<th>Entry Header 2</th>
-							<th>Entry Header 3</th>
-							<th>Entry Header 4</th>
-						</tr>
-						<tr>
-							<td>Entry First Line 1</td>
-							<td>Entry First Line 2</td>
-							<td>Entry First Line 3</td>
-							<td>Entry First Line 4</td>
-						</tr>
-						<tr>
-							<td>Entry Line 1</td>
-							<td>Entry Line 2</td>
-							<td>Entry Line 3</td>
-							<td>Entry Line 4</td>
-						</tr>
-						<tr>
-							<td>Entry Last Line 1</td>
-							<td>Entry Last Line 2</td>
-							<td>Entry Last Line 3</td>
-							<td>Entry Last Line 4</td>
-						</tr>
-					</table><br>
+					<ul>
+						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+						elit. Aenean commodo ligula eget dolor. Aenean 
+						massa.</li>
+						<li>Cum sociis natoque penatibus et magnis dis 
+						parturient montes, nascetur ridiculus mus. Donec quam 
+						felis, ultricies nec, pellentesque eu, pretium quis, 
+						sem.</li>
+						<li>Nulla consequat massa quis enim. Donec pede justo, 
+						fringilla vel, aliquet nec, vulputate eget, arcu.</li>
+						<li>In enim justo, rhoncus ut, imperdiet a, venenatis 
+						vitae, justo. Nullam dictum felis eu pede mollis 
+						pretium. Integer tincidunt.</li>
+					</ul><br>
 				</div>	
 			</section>
-			<section>
+			<section id="section_flex_box">
 				<h2>Flex Box</h2>
-				<div class="lecture_content">
+				<div class="lecture_content"><br>
+					<div id="section_flex_container">
+							<div class="flex_box flex1">1</div>
+							<div class="flex_box flex2">2</div>
+							<div class="flex_box flex3">3</div>
+							<div class="flex_box flex4">4</div>
+							<div class="flex_box flex5">5</div>
+							<div class="flex_box flex6">6</div>
+					</div>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
 						elit. Aenean commodo ligula eget dolor. Aenean massa 
 						<strong>strong</strong>. Cum sociis natoque penatibus 
@@ -292,8 +334,25 @@
 						Curabitur ullamcorper ultricies nisi.</p><br>
 				</div>
 			</section>
-			<section>
+			<section id="section_grid">
 				<h2>Grid Layout</h2>
+				<div class="lecture_content"><br>
+					<div id="section_grid_container">
+						<div class="grid grid1">1</div>
+						<div class="grid grid2">2</div>
+						<div class="grid grid3">3</div>
+						<div class="grid grid6">4</div>
+						<div class="grid grid5">5</div>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
+						elit. Aenean commodo ligula eget dolor. Aenean massa. 
+						Cum sociis natoque penatibus et magnis dis parturient 
+						montes, nascetur ridiculus mus. Donec quam felis, 
+						ultricies nec, pellentesque eu, pretium quis, sem.</p><br>
+				</div>
+			</section>
+			<section>
+				<h2>To Do</h2>
 				<div class="lecture_content">
 					<ul>
 						<li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
@@ -308,17 +367,12 @@
 						<li>In enim justo, rhoncus ut, imperdiet a, venenatis 
 						vitae, justo. Nullam dictum felis eu pede mollis 
 						pretium. Integer tincidunt.</li>
-					</ul><br>
-				</div>
-			</section>
-			<section>
-				<h2>To Do</h2>
-				<div class="lecture_content">
+					</ul>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing 
 					elit. Aenean commodo ligula eget dolor. Aenean massa. 
 					Cum sociis natoque penatibus et magnis dis parturient 
 					montes, nascetur ridiculus mus. Donec quam felis, 
-					ultricies nec, pellentesque eu, pretium quis, sem.</p><br>
+					ultricies nec, pellentesque eu, pretium quis, sem.</p>
 				</div>
 			</section>
 		</main>
@@ -342,4 +396,4 @@
 	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
-</html>
+</html>	

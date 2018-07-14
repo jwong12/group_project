@@ -98,7 +98,7 @@ textarea {
    ========================================================================== */
 #body_wrapper {
   background-color: #f2f2f2;
-  padding: 0px 15px;
+  padding: 20px 15px;
   max-width: 1024px;
   margin: auto;
 }
@@ -108,9 +108,6 @@ textarea {
   text-align: center;
   grid-template-columns: 325px 325px 325px;
   grid-template-rows: 260px 260px;
-  /* Grid Gap - sets spacing between grid elements */
-  /* Grid Gap is shorthand for grid-column-gap and grid-row-gap 	*/
-  /* grid-gap: [row-gap] [column-gap]	*/
   grid-gap: 2px;
 }
 
@@ -126,6 +123,17 @@ textarea {
   font-size: 19px;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+#container_boxes .box p {
+  font-size: 14px;
+}
+
+code {
+  display: block;
+  font-size: 14px;
+  color: #7A5C58;
+  font-weight: bold;
 }
 
 fieldset {
@@ -149,15 +157,9 @@ legend {
   padding: 0px 2px;
 }
 
-code {
-  font-size: 14px;
-  color: #5ca6f2;
-  font-weight: bold;
-}
-
 #background_image_fixed {
   background-attachment: fixed;
-  background-image: url(../img/leafer.png);
+  background-image: url(../img/lecture03/leafer.png);
   border: 1px solid black;
   width: 150px;
   height: 150px;
@@ -174,6 +176,8 @@ code {
 }
 
 #sprite_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   float: left;
 }
@@ -183,7 +187,7 @@ code {
 }
 
 .sprite {
-  background: url("../img/sprite.png") no-repeat top left;
+  background: url("../img/lecture03/sprite.png") no-repeat top left;
   width: 48px;
   height: 48px;
   margin: 5px 12px;
@@ -200,6 +204,241 @@ code {
 
 .sprite.twitter {
   background-position: -116px 0;
+}
+
+.fab {
+  width: 40px;
+}
+
+.svg_a {
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+}
+
+.svg_a:link, .svg_a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.svg_a:hover {
+  background-color: #7c7c7c;
+  color: #CFEE9E;
+}
+
+.svg_wrapper {
+  display: inline-block;
+  border: 2px solid #7c7c7c;
+  margin: 4px 10px;
+}
+
+.box4 code {
+  background-color: #d3cce2;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px dotted #7A5C58;
+}
+
+.item_box {
+  font-size: 13px;
+  background-color: #ababab;
+  border: solid 1px black;
+  padding: 0px 5px;
+  float: left;
+  width: 25%;
+}
+
+.content_box {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.border_box {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex_box {
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.flex1 {
+  background: #1abc9c;
+}
+
+.flex2 {
+  background: #3498db;
+}
+
+.flex3 {
+  background: #9b59b6;
+}
+
+.flex4 {
+  background: #34495e;
+}
+
+.flex5 {
+  background: #f1c40f;
+}
+
+.flex6 {
+  background: #e67e22;
+}
+
+#flex_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#flex_container .flex1 {
+  font-size: 44px;
+}
+
+#flex_container .flex2 {
+  font-size: 125px;
+}
+
+#flex_container .flex3 {
+  font-size: 66px;
+}
+
+#flex_container .flex6 {
+  font-size: 92px;
+}
+
+#section_flex_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#section_flex_container .flex1 {
+  font-size: 27px;
+}
+
+#section_flex_container .flex3 {
+  font-size: 150px;
+}
+
+#section_flex_container .flex4 {
+  font-size: 68px;
+}
+
+#section_flex_container .flex5 {
+  font-size: 42px;
+}
+
+#section_flex_container .flex6 {
+  font-size: 112px;
+}
+
+#grid_container {
+  display: grid;
+  grid-template-columns: 90px 1fr 55px;
+  grid-template-rows: 65px 65px 65px;
+  grid-gap: 4px 10px;
+}
+
+#grid_container .grid {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.grid1 {
+  background: #1abc9c;
+}
+
+.grid2 {
+  background: #3498db;
+}
+
+.grid3 {
+  background: #9b59b6;
+}
+
+.grid4 {
+  background: #34495e;
+}
+
+.grid5 {
+  background: #f1c40f;
+}
+
+.grid6 {
+  background: #e67e22;
+}
+
+.grid7 {
+  background: #e74c3c;
+}
+
+.grid8 {
+  background: #bdc3c7;
+}
+
+.grid9 {
+  background: #2ecc71;
+}
+
+#section_grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+  grid-template-areas: "one three three three" "one four four five" "two four four five";
+}
+
+#section_grid_container .grid {
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+#section_grid_container .grid1 {
+  grid-area: one;
+}
+
+#section_grid_container .grid2 {
+  grid-area: two;
+}
+
+#section_grid_container .grid3 {
+  grid-area: three;
+}
+
+#section_grid_container .grid6 {
+  grid-area: four;
+}
+
+#section_grid_container .grid5 {
+  grid-area: five;
+}
+
+main {
+  padding-top: 10px;
 }
 
 main ul, main ol {
@@ -225,7 +464,14 @@ main section h3, main section h4, main section h5 {
 }
 
 main section table, main section form, main section dl, main section p {
-  margin: 10px;
+  margin: 15px 10px;
+}
+
+#section_box_model code {
+  background-color: #d3cce2;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px dotted #7A5C58;
 }
 
 .lecture_content fieldset {

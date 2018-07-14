@@ -22,7 +22,7 @@ $(document).ready(function(){
             viewport = $('body').width();
         });
     }
-    
+
     if(viewport >= 974.5){
         $('#more-dropdown2').hover(function(){
             $('#menu-dropdown2').slideToggle();
@@ -66,6 +66,20 @@ $(document).ready(function(){
         $("#section_box_model h2").next().slideToggle();
 
         var element = document.getElementById("section_box_model");
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    });
+
+    $(".box5").click(function (event){
+        $("#section_flex_box h2").next().slideToggle();
+
+        var element = document.getElementById("section_flex_box");
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    });
+
+    $(".box6").click(function (event){
+        $("#section_grid h2").next().slideToggle();
+
+        var element = document.getElementById("section_grid");
         element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     });
     
