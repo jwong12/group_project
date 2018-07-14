@@ -1,0 +1,39 @@
+/*
+    Author: James Wong
+    Date: July 3rd, 2018
+*/
+
+body{
+    background-color: antiquewhite;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 36px;
+}
+#body_wrapper{
+    text-align:center;
+    width: 100%;
+}
+
+#img_wrapper{
+    margin: auto;
+    width: 50%;
+}
+
+#img_wrapper img{
+    max-width: 100%;
+}
+
+p a:link{
+    text-decoration: none;
+    color: #2190d1;
+}
+
+p a:visited{
+    color: #2190d1;
+}
+
+p a:hover{
+    color: #ba184b;
+}

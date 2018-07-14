@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+@import url('header.css');
+
+//fonts
+$titles-font: 'Amaranth', sans-serif;
+
+//colors
+$bg-main: #f2f2f2;
+$bg-bubbles: #eafdf8;
+$bg-platinum: #e5e9ec;
+
+//general colors -> $cl-(i,g,p,f,m) to easily refer to them
+$cl-independence: #505168;
+$cl-gunmental: #27233a;
+$cl-paleblue: #abd2fa;
+$cl-frenchblue: #7692ff;
+$cl-mediumblue: #8edce6;
+
+//heading backgrounds
+$heading-bg1: #297373;
+$heading-bg2: #393e41;
+$heading-bg3: #ddeadc;
+
+//for rgba background effect
+@mixin rgba-bg ($alpha) {
+    background-color: rgba(0, 0, 0, $alpha);
+}
+
+@mixin transitions ($transition) {
+	-webkit-transition: $transition;  
+	-moz-transition:    $transition;
+	-ms-transition:     $transition; 
+    -o-transition:      $transition;
+    transition:         $transition;  
+}
+
+// h1, h2, h3{
+//     font-family: $titles-font;
+// }
+h2{
+    color: white;
+    background-color: $heading-bg1;
+    padding: .3em .5em;
+}
+h3{
+    background-color: $heading-bg3;
+    border-left: .4em solid $cl-frenchblue;
+    padding-left: .5em;
+}
+h1{
+    font-size: 2em;
+}
+
+ul{
+    list-style: none;
+}
+
+// #banner{
+//     height: 20em;
+//     width: 100%;
+//     background-image:  url("../img/home-banner3.jpg");
+//     background-attachment: fixed;
+//     background-size: contain;
+//     position: relative;
+//     #rgba{
+//         @include rgba-bg(.5);
+//         color: white;
+//         height: 100%;
+//     }
+//     #course-name{
+//         font-family: $titles-font;
+//         font-size: 2em;
+//     }
+//     #some-links{
+//         li{
+//             display: inline-block;
+//             margin-left: .5em;
+//         }
+//         a{
+//             color: white;
+//             padding: .5em;
+//             border-bottom: .1em solid $cl-paleblue;
+//             @include transitions(.4s);
+//         }
+//         a:hover{
+//             text-decoration: none;
+//             background-color: $cl-paleblue;
+//             color: black;
+//         }
+//     }
+// }
+
+// #nav-div{
+//     border-bottom: .1em solid lightgray;
+// }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+// #dropdown1{
+//     position: relative;    
+//     #menu-dropdown1{
+//         position: absolute;
+//         top: 2em;
+//     }
+// }
+
+// #more-dropdown2{
+//     position: relative;    
+//     #menu-dropdown2{
+//         position: absolute;
+//         top: 2em;
+//     }
+// }
+
+#main-content, .extra-content{
+    background-color: $bg-main;
+}
+#btns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    a{
+        display: inline-block;
+        padding: .5em 1.5em;
+        border: .1em solid $cl-mediumblue;
+        color: black;
+        @include transitions(.4s);
+    }
+    a:hover{
+        text-decoration: none;
+        background-color: $cl-mediumblue;
+    }
+}
+
+main, aside{
+    padding: 1em;
+}
+
+aside{
+    background-color: $bg-bubbles;
+}
+
+aside h3{
+    color: white;
+    background-color: $heading-bg2;
+    padding: .3em .5em;
+    border: none;
+}
+
+#mc{
+    background-color: $bg-platinum;
+}
+
+.extra-content{
+    div{
+        padding: 1em;
+        ul{
+            list-style: outside;
+        }
+    }
+}
+
+#examples{
+    padding: 1em;
+    .carousel-indicators{
+        bottom: 3.5em;
+    }
+    h4{
+        border-bottom: .1em solid $cl-gunmental;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        text-align: center;
+    }
+
+    #carouselExampleIndicators{
+        background-color: #aaaaaa;
+        .carousel-caption{
+            @include rgba-bg(.4);
+            h3{
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+    .carousel-item{
+        height: 33em;
+    }
+}
+
+footer{
+    background-color: $cl-independence;
+    padding: 1em;
+    color: white;
+    a{
+        color: white;
+        border: .1em solid white;
+        padding: .5em;
+        @include transitions(.4s);
+    }
+    a:hover{
+        color: black;
+        background-color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    // #some-links{
+    //     li{
+    //         display: block;
+    //         margin-bottom: 1em;
+    //         margin-right: 0;
+    //     }a{
+    //         padding: .1em;
+    //     }
+    // }
+    // #banner{
+    //     height: 17em;
+    //     h1{
+    //         font-size: 2em;
+    //     }
+    // }
+    #examples{
+        .carousel-item{
+            height: 23em;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('img/slideshow/responsive_background.jpg')
+        }
+    }
+}
+
+// @media screen and (max-width: 1015px){
+//     #banner{
+//         height: 14em;
+//         h1{
+//             font-size: 1.5em;
+//         }
+//         p{
+//             font-size: .8em;
+//         }
+//     }
+// }
+@media screen and (max-width: 991px){
+    // #banner{
+    //     #some-links{
+    //         a{
+    //             background-color: $cl-paleblue;
+    //             padding: .2em;
+    //         }
+    //     }
+    // }
+    #examples{
+        .carousel-indicators{
+            bottom: 5.5em;
+        }
+        .carousel-item{
+            height: 18em;
+        }
+        .carousel-caption{
+            bottom: 3.5em;
+        }
+    }
+}
+
+// @media screen and (max-width: 840px){
+//     #banner{
+//         background-image: url("../img/home-banner-mini.jpg");
+//         background-attachment: fixed;
+//         background-size: contain;
+//         h1{
+//             font-size: 1.5em;
+//         }
+//         p{
+//             font-size: .5em;
+//         }
+//         #some-links{
+//             a{
+//                 background-color: $cl-paleblue;
+//                 padding: .2em;
+//             }
+//         }
+//     }
+// }
+
+@media screen and (max-width: 767px){
+    #examples{
+        .carousel-indicators{
+            bottom: 1em;
+        }
+        .carousel-item{
+            height: 14em;
+        }
+        .carousel-caption{
+            bottom: 3.5em;
+        }
+    }
+}
+
+// @media screen and (max-width: 575px){
+//     #banner{
+//         background-size: unset;
+//         background-position-x: 90%;
+//         #course-name{
+//             position: absolute;
+//             left: 3.3em;
+//             h1{
+//                 font-size: 1.1em;
+//             }
+//             p{
+//                 font-size: .5em;
+//             }
+//         }
+//         #some-links{
+//             position: absolute;
+//             top: 0;
+//             right: 1em;
+//             ul{
+//                 li{
+//                     display: inline-block;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media screen and (max-width: 400px){
+    #examples{
+        .carousel-indicators{
+            bottom: .5em;
+        }
+        .carousel-item{
+            height: 10em;
+        }
+    }
+}

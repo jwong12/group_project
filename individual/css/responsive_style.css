@@ -1,0 +1,865 @@
+/*
+    Author: James Wong
+    Date: June 20th, 2018
+*/
+@import url("reset.css");
+
+@media all{
+    html {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-family: "Open Sans",Arial,sans-serif;
+        font-size:1em;
+    }
+    
+    *, *:before, *:after {
+        -webkit-box-sizing: inherit;
+                box-sizing: inherit;
+    }
+
+    body{
+        background-color: #ededed;
+    }
+    
+    h1, h2, h3, h4, h5, h6{
+        font-weight:bold;	
+        margin:0px 15px 0px;
+        padding: 15px 0px 5px;
+    }
+    
+    h1{	font-size:1.8em;}
+    h2{	font-size:1.5em;}
+    h3{	
+        font-size:1.2em;
+        padding-left: 20px;
+    }
+    h4, h5, h6{ font-size:1.1em;}
+    
+    p{ 	
+        margin:10px 15px;
+    }
+
+    #body_wrapper{
+        width:100%;
+        background-color: #ededed;
+    }
+
+    header{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        background-color: #232128;
+        height:60px;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    #logo{
+        color: #A9A9A9;
+        font-size:1.9em;
+        padding:14px 20px 0 30px;
+        margin:0;
+        min-width:330px;
+    }
+    
+    #aside_1{
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 250px;
+        margin: 15px 10px 0;
+    }
+
+    #social_media a img{
+        width:30px;
+    }
+
+    #search_bar{
+        display:inline-block;
+        padding:5px 10px;
+    }
+
+    #search_bar img{
+        -webkit-filter:invert(100%);
+                filter:invert(100%);
+        width:20px;
+    }
+
+    #search_bar::before{
+        content: "Search";
+        color:white;
+        font-size: 14px;
+        display:inline-block;
+        vertical-align: top;
+        padding:4px 6px;
+    }
+    
+    nav{
+        background-color: #F26722;
+        width:100%;
+        height: 44px;
+    }
+
+    #nav_list li{
+        float:left;
+    }
+
+    .nav_link:link{
+        text-decoration: none;
+        display:inline-block;
+        padding: 14px; 
+        color:white;
+        text-shadow:5px 5px 10px black;
+        white-space:nowrap;
+
+    }
+    .nav_link:visited{
+        color:white;
+        text-shadow:5px 5px 10px black;
+    }
+
+    .nav_link:hover{
+        background-color: #303030;
+    }
+
+    .nav_link:active{
+        background-color: #161616;
+    }
+
+    #main_wrapper{
+        clear:both;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        max-width: 1000px;
+        margin: auto;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    }
+
+    #aside2_wrapper{
+        margin-top: 40px;
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    .img_content{
+        margin: 15px;
+        width: 95%;
+    }
+
+    .aside_2{
+        clear:both;
+        display: grid;
+        width: 100%;
+    }
+
+    #heroes{
+        background-color: #F26722;
+        color: white;
+        text-align: center;
+        height: 30px;
+        padding-top: 7px;
+    }
+
+    .bg-ana {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -142px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-ana:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-bastion {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -142px -370px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-bastion:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-brigitte {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -10px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-brigitte:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-doomfist {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -142px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-doomfist:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-dva {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -274px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-dva:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-genji {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -274px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-genji:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-hanzo {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -10px -250px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-hanzo:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-junkrat {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -142px -250px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-junkrat:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-lucio {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -274px -250px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-lucio:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-mccree {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -406px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-mccree:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-mei {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -406px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-mei:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-mercy {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -406px -250px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-mercy:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-moira {
+        width: 109px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -670px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-moira:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-orisa {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -10px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-orisa:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-pharah {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -274px -370px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-pharah:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-reaper {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -406px -370px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-reaper:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+    
+    .bg-reinhardt {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -538px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-reinhardt:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-roadhog {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -538px -130px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-roadhog:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-soldier76 {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -538px -250px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-soldier76:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-sombra {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -538px -370px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-sombra:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-symmetra {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -10px -490px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-symmetra:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-torbjorn {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -142px -490px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-torbjorn:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-tracer {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -274px -490px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-tracer:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-widowmaker {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -406px -490px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-widowmaker:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-winston {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -538px -490px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-winston:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-zarya {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -10px -370px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-zarya:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+    .bg-zenyatta {
+        width: 112px; height: 100px;
+        background: url('../images/responsive_layout/overwatch_icons.png') -670px -10px;
+        -webkit-box-shadow:inset 0px 0px 20px 1px #000;
+                box-shadow:inset 0px 0px 20px 1px #000;
+    }
+
+    .bg-zenyatta:hover{
+        -webkit-transform:translate(5px, 5px) scale(1.10);
+                transform:translate(5px, 5px) scale(1.10);
+        -webkit-box-shadow:none;
+                box-shadow:none;
+        border: 3px solid #4970cc;
+        background-color:#c1b0b0;
+        -webkit-transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:-webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease;
+        transition:transform 1s ease, box-shadow 1s ease, -webkit-transform 1s ease, -webkit-box-shadow 1s ease;
+    }
+
+
+    .h3_content{
+        padding-left: 20px;
+    }
+
+    #body_link:link{
+        text-decoration: none;
+    }
+
+
+    footer{
+        width:100%;
+        background-color: #232128;
+        color: #fff;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+}
+
+@media print{
+    header, nav, footer, #aside_1, #aside2_wrapper, img{
+        display: none;
+    }
+
+    #body_wrapper, main{
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+	    background: none;
+    }
+
+    h2, h2, h4, h5, h6{ 	page-break-after: avoid;	}
+
+    section, article{ 	page-break-before: always;	}
+
+    a[href^="http"]:after{
+        content: " (URL: " attr(href) ") ";   
+     }
+}
+
+@media screen and (max-width: 600px){
+    header{
+        -webkit-box-pack: none;
+            -ms-flex-pack: none;
+                justify-content: none;
+    }
+
+    #aside_1{
+        width: 25px;
+        padding: 0px 35px 0px 0px;
+    }
+
+    #social_media{
+        display:none;
+    }
+
+    #search_bar::before{
+        content: none;
+    }
+
+    #logo{
+        text-align: center;
+        width:100%;
+        padding: 14px 0;
+    }
+}
+
+@media screen and (max-width:760px){
+    nav{
+        background-color: #F26722;
+        height: 88px;
+    }
+
+    #nav_list{
+        display:grid;
+        grid-template-columns: repeat(4, minmax(140px, 1fr));
+        grid-template-rows: repeat(3, 44px);
+        clear:both;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:550px){
+    nav{
+        background-color: #F26722;
+        height: 176px;
+    }
+
+    #nav_list{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        grid-template-rows: repeat(4, 44px);
+        clear:both;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px){
+    h1{	font-size:2.1em;}
+    h2{	font-size:1.7em;}
+    h3{	font-size:1.3em;}
+    h4{	font-size:1.2em;}
+
+}
+
+@media screen and (min-width: 900px){
+    h1{	font-size:2.4em;}
+    h2{	font-size:1.9em;}
+    h3{	font-size:1.4em;}
+    h4, h5, h6{ font-size:1.3em;}
+}
+
+@media screen and (max-width: 999px){
+    #aside2_wrapper{
+        margin-top: 20px;
+    }
+
+    #heroes{
+        width: 95%;
+        margin: auto;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    }
+
+    .aside_2{
+        clear:both;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 90%;
+        margin-left: 24px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #aside2_wrapper{
+        margin-top: 70px;
+    }
+
+    .main{
+        width: 66%;
+    }
+
+    .aside_2{
+        margin-left: 0px;
+        width: 34%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

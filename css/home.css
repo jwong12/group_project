@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Amaranth");
+@import url("header.css");
+h2 {
+  color: white;
+  background-color: #297373;
+  padding: .3em .5em;
+}
+
+h3 {
+  background-color: #ddeadc;
+  border-left: 0.4em solid #7692ff;
+  padding-left: .5em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#main-content, .extra-content {
+  background-color: #f2f2f2;
+}
+
+#btns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#btns a {
+  display: inline-block;
+  padding: .5em 1.5em;
+  border: 0.1em solid #8edce6;
+  color: black;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#btns a:hover {
+  text-decoration: none;
+  background-color: #8edce6;
+}
+
+main, aside {
+  padding: 1em;
+}
+
+aside {
+  background-color: #eafdf8;
+}
+
+aside h3 {
+  color: white;
+  background-color: #393e41;
+  padding: .3em .5em;
+  border: none;
+}
+
+#mc {
+  background-color: #e5e9ec;
+}
+
+.extra-content div {
+  padding: 1em;
+}
+
+.extra-content div ul {
+  list-style: outside;
+}
+
+#examples {
+  padding: 1em;
+}
+
+#examples .carousel-indicators {
+  bottom: 3.5em;
+}
+
+#examples h4 {
+  border-bottom: 0.1em solid #27233a;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  text-align: center;
+}
+
+#examples #carouselExampleIndicators {
+  background-color: #aaaaaa;
+}
+
+#examples #carouselExampleIndicators .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#examples #carouselExampleIndicators .carousel-caption h3 {
+  background-color: transparent;
+  border: none;
+}
+
+#examples .carousel-item {
+  height: 33em;
+}
+
+footer {
+  background-color: #505168;
+  padding: 1em;
+  color: white;
+}
+
+footer a {
+  color: white;
+  border: .1em solid white;
+  padding: .5em;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #examples .carousel-item {
+    height: 23em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("img/slideshow/responsive_background.jpg");
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #examples .carousel-indicators {
+    bottom: 5.5em;
+  }
+  #examples .carousel-item {
+    height: 18em;
+  }
+  #examples .carousel-caption {
+    bottom: 3.5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #examples .carousel-indicators {
+    bottom: 1em;
+  }
+  #examples .carousel-item {
+    height: 14em;
+  }
+  #examples .carousel-caption {
+    bottom: 3.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #examples .carousel-indicators {
+    bottom: .5em;
+  }
+  #examples .carousel-item {
+    height: 10em;
+  }
+}

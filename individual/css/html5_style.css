@@ -1,0 +1,56 @@
+/*
+    Author: James Wong
+    Date: June 6, 2018
+*/
+body{
+    font-family: Verdana,sans-serif;
+}
+
+header{
+    background-color: #d97b7a;
+    color: whitesmoke;
+    height:70px;
+}
+
+h1{
+    margin:0;
+    padding: 13px;
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+    text-align: center;
+}
+
+#body_wrapper{
+    color: #444444;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    margin: 0;
+}
+
+main{
+    background-color:#edd5cd;
+    margin:auto;
+    width:60%;
+}
+
+#content_wrapper{
+    padding:15px;
+}
+
+.images{
+    width: 550px;
+}
+
+.resource_link:link{
+    color:#1c52cc;
+    text-decoration: none;
+}
+
+.resource_link:visited{
+    color:#1c52cc;
+}
+

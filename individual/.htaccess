@@ -1,0 +1,14 @@
+# .htaccess 
+# ------------
+# the .htaccess file customizes how the server will behave
+# comments in .htaccess begin with a number sign (like this line does)
+
+# redirect 404 errors to file_not_found.html
+ErrorDocument 404 /students/jwong695/error/file_not_found.html
+
+# Server will use British Columbia time zone
+SetEnv TZ Canada/Pacific
+
+# AddType and AddHandler can be instructed to parse .html files as .php
+AddType application/x-httpd-php .html .htm
+AddHandler application/x-httpd-php .html .htm

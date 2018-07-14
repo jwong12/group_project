@@ -7,7 +7,9 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+@import url("header.css");
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #222;
   font-family: Verdana, sans-serif, Helvetica;
@@ -16,6 +18,7 @@ html {
 }
 
 html *, html *:before, html *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -80,72 +83,118 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-header #div_header {
-  display: flex;
-  justify-content: space-between;
-  min-width: 425px;
-}
-
-header #div_header a {
-  clear: both;
-}
-
-header #div_header a img {
-  width: 230px;
-  height: auto;
-}
-
-header #div_header #h1_course {
-  font-size: 16px;
-  text-align: end;
-  margin: 5px 10px 0px;
-  width: 290px;
-}
-
-header #h1_title {
-  font-size: 26px;
-  margin: 2px 10px;
-  width: 382px;
-}
-
-header #nav_wrap {
-  background-color: #b3d4fc;
-}
-
-header #nav_wrap nav {
-  height: 30px;
-  background-color: lightgreen;
+#body_wrapper {
+  background-color: #f2f2f2;
+  padding: 15px;
+  max-width: 1024px;
   margin: auto;
-  width: 580px;
 }
 
-header #nav_wrap nav ul {
+#container {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 325px 325px 325px;
+  grid-template-rows: 260px 260px;
+  grid-gap: 2px;
+}
+
+#container h2 {
+  color: #5D576B;
+  font-size: 19px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#background_image_fixed {
+  background-attachment: fixed;
+  background-image: url(../img/leafer.png);
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+main ul, main ol {
+  margin-top: 10px;
+}
+
+main section {
+  margin: 0;
+}
+
+main section h2 {
+  background-color: #8AC4FF;
+  color: #5D576B;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 10px dimgray;
+  box-shadow: 3px 3px 10px dimgray;
+  border: 1px solid gray;
+  font-size: 19px;
   margin: 0px;
-  padding: 0px;
-  list-style-type: none;
+  padding: 4px 10px;
+  cursor: pointer;
 }
 
-header #nav_wrap nav ul li {
-  padding: 3px 15px 0px;
-  float: left;
+main section h3 {
+  background-color: #eb1919;
+  color: #FFF;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 10px dimgray;
+  box-shadow: 3px 3px 10px dimgray;
+  border: 1px solid gray;
+  font-size: 19px;
+  margin: 0;
+  padding: 4px 10px;
+  cursor: pointer;
 }
 
-header #nav_wrap nav ul li a:link {
+main section h4, main section h5 {
+  margin: 10px;
+  font-size: 1.1em;
+}
+
+main section table, main section form, main section dl, main section p {
+  margin: 10px;
+}
+
+.box_content {
+  padding-top: 15px;
+}
+
+.lecture_content fieldset {
+  margin: 10px;
+}
+
+.video_heading {
+  max-width: 640px;
+  margin-left: 5px;
+}
+
+.top_of_page {
+  text-align: center;
+  height: 40px;
+  padding: 7px 10px;
+  color: red;
+}
+
+footer {
+  text-align: center;
+  height: 40px;
+  background-color: #555;
+  padding: 7px 10px;
+}
+
+footer a:link {
   text-decoration: none;
-  display: inline-block;
+  font-size: 13px;
+  color: white;
+}
+
+footer a:visited {
+  color: white;
+}
+
+footer p {
+  margin: 0px;
 }
 
 /* ==========================================================================
@@ -238,6 +287,35 @@ header #nav_wrap nav ul li a:link {
   /* Style adjustments for high resolution devices */
 }
 
+@media (max-width: 1000px) {
+  #container {
+    grid-template-columns: 325px 325px;
+    grid-template-rows: 260px 260px 260px;
+  }
+}
+
+@media (max-width: 750px) {
+  #search_engine form input {
+    display: none;
+  }
+  #search_engine #search_bar img {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  #container {
+    grid-template-columns: 325px;
+    grid-template-rows: 260px 260px 260px 260px 260px 260px;
+  }
+}
+
+@media (max-width: 575px) {
+  #nav_wrap {
+    height: 60px;
+  }
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -301,4 +379,60 @@ header #nav_wrap nav ul li a:link {
   h3 {
     page-break-after: avoid;
   }
+}
+
+.links table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.links table td, .links table th {
+  border: 1px solid #476C9B;
+  padding: 8px;
+}
+
+.links table tr:nth-child(even) {
+  background-color: #DDD;
+}
+
+.links table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #476C9B;
+  color: #FFF;
+}
+
+.heading_special {
+  background-color: #476C9B;
+  color: #FFF;
+  padding: 10px;
+  margin: 0;
+}
+
+.card-text {
+  color: #FFF;
+  background-color: #A9A9A9;
+  margin: 0;
+  padding: 30px;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-footer {
+  background-color: #DDD;
+}
+
+.btn-primary {
+  background-color: #A9A9A9;
+}
+
+.video-field {
+  margin-left: 20px;
 }

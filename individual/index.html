@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        Author: James Wong
+        Date: June 4th, 2018
+    -->
+    <head>
+        <title>James Wong Homepage</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./css/style.css" title="Standard Style" />
+        <link rel="stylesheet" href="./css/ryan.css" title="Ryan Joseph" />
+    </head>
+    <body>
+        <div id="header">
+            <div id="h1"><h1>COMP 1950: James' Homepage</h1></div>
+        </div>
+        <div id="nav_wrapper">
+            <div id="nav_panel">
+                <ul id="nav_list">
+                    <li><a class="nav_link" href="./html/html5.html">HTML5</a></li>
+                    <li><a class="nav_link" href="https://bcitcomp.ca/students/rjoseph14/">CSS</a></li>
+                    <li><a class="nav_link" href="./html/css_layout.html">Layout</a></li>
+                    <li><a class="nav_link" href="./html/responsive_layout.html">Responsive Layout</a></li>
+                    <li><a class="nav_link" href="./html/jquery.html">JQuery</a></li>
+                    <li><a class="nav_link" href="./fake_link.html">Server-side</a></li>
+                    <li><a class="nav_link" href="#">Templates</a></li>
+                </ul>
+            </div>
+        </div>
+        <?php
+            date_default_timezone_set("Canada/Pacific");
+
+            $today = date("F d, Y, G:iA");	
+
+            echo "<p style='text-align:center;'>Today is: $today</p>";
+        ?>
+        <div id="body">
+            <div id="content">
+                <p>Hello and welcome to my homepage. My name is James Wong, and my goal is to become a software developer within two years. I am in the Computer Systems Diploma(CTS:PTS) program, and I am currently taking 4 courses while working full-time. Besides English, I can also speak Cantonese, Mandarin and Spanish. If you would like to practice any of these languages, I am happy to do so. :)</p>
+                <p>Some of my hobbies are: video games, music, badminton, hikes and movies. Interesting fact: I play poker semi professionally to earn extra side income. The poker game that I specialize in is Texas Hold'em.</p><br>
+                
+                <h2>My most frequently browsed websites are:</h2>
+                <dl>
+                    <dt><a class="link" target=_blank href="https://stackoverflow.com/"><img class="logo" src="./images/stackoverflow.png" alt="Stack Overflow Logo"></a></dt>
+                    <dd>This website contains so much information about any programming languages. The community in this forum is very helpful.</dd>
+                    <dt><a class="link" target=_blank href="https://www.reddit.com/"><img class="logo" src="./images/reddit.jpeg" alt="Reddit Logo"></a></dt>
+                    <dd>This is what I read or watch when I get bored. There are many interesting or funny posts from Reddit users.</dd>
+                    <dt><a class="link" target=_blank href="https://www.ted.com/"><img class="logo" src="./images/tedtalk.png" alt="Ted Talk Logo"></a></dt>
+                    <dd>This is where I visit when I feel like learning some fascinating stuff.</dd>
+                </dl>
+    
+                <!-- <a href="http://validator.w3.org/check?uri=referer">Validate with W3C</a> -->
+            </div>
+        </div>
+    </body>
+</html>

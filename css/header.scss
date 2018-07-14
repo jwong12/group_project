@@ -116,11 +116,11 @@ h1{
         }
     }
 }
-@media screen and (max-width: 991){
+@media screen and (max-width: 991px){
     #banner{
         #some-links{
             a{
-                background-color: #9FA0FF;
+                background-color: $externalLinksHover;
                 padding: .2em;
             }
         }
@@ -150,7 +150,7 @@ h1{
         }#some-links{
             a{
                 background-color: $externalLinksHover;
-                padding: .3em;
+                padding: .2em;
             }
 
             a:hover{

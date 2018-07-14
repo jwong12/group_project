@@ -1,0 +1,200 @@
+/*
+Author: James Wong
+Date: June 17th, 2018
+*/
+@import url("reset.css");
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:bold;	
+	margin:20px 15px 0px;
+}
+
+h1{	font-size:2em;	}
+h2{	font-size:1.8em;}
+h3{	font-size:1.6em;}
+h4{	font-size:1.4em;}
+p{ 	margin:10px 15px;}
+
+th, td{
+    padding: 5px;
+}
+
+#body_wrapper{
+    max-width: 1024px;
+	min-width:700px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+header{
+    background-color: #405281;
+}
+
+#float_wrapper{
+    color:#eee;
+	display: flex;
+    justify-content: space-between;
+}
+
+aside{
+    display:flex;
+    margin:25px 15px 0px;
+}
+
+#search {
+    width: 30px; height: 30px;
+    background: url('../images/css_sprites.png') -40px -2px;
+    margin: 0px 2px;
+}
+
+#cart {
+    width: 34px; height: 30px;
+    background: url('../images/css_sprites.png') -2px -2px;
+    
+}
+
+header nav{
+    display:flex;
+    justify-content: center;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+    display: flex;
+}
+
+header nav a {
+    display:block;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 40px;
+	color: #2F68DC;
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+header a:link{
+    color: #F4B350;
+}
+
+header a:visited{
+    color: #F4B350;
+}
+
+header a:hover{
+    background-color: #a8b7c0;
+    color: #0F4880;
+}
+
+#unhover{
+    background-color: #405281;
+    color: #F4B350;
+}
+
+main {
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+main .col1{
+    width: 20%;	
+    background-image: url(../images/background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+main .col2 {
+    width: 80%;
+    min-height:760px;
+    background-color: #cadfea;
+}
+
+#name{
+    align-content: center;
+}
+textarea{
+    max-width: 165px;   
+}
+
+table{
+    margin:25px;
+}
+tr:nth-child(2n){	
+	background-color:#d3a9a9;
+}
+tr:nth-child(2n + 1){ 
+	background-color:#1FBED6;
+}
+
+main .col3 {
+    width: 50.09%;
+    display: flex; 	
+}
+
+main .col4 {
+    width: 49.91%;	
+    background-color: #cadfea;
+}
+
+#facebook {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -178px -94px;
+}
+
+#twitter {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -10px -94px;
+}
+
+#instagram {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -94px -178px;
+}
+
+#linkedin {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -94px -10px;
+}
+
+#whatsapp {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -94px -94px;
+}
+
+#line {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -10px -10px;
+}
+
+#youtube {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -178px -10px;
+}
+
+#google_plus {
+    width: 64px; height: 64px;
+    background: url('../images/social_media.png') -10px -178px;
+}
+
+footer{
+    background-color: #405281;
+    color: #eee;
+    height:100%;
+}
+
+footer p{
+    text-align: center;
+    margin: 0;
+    padding:15px;
+}
