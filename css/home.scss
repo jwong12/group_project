@@ -14,14 +14,16 @@ $bg-platinum: #e5e9ec;
 //general colors -> $cl-(i,g,p,f,m) to easily refer to them
 $cl-independence: #505168;
 $cl-gunmental: #27233a;
-$cl-paleblue: #abd2fa;
-$cl-frenchblue: #7692ff;
+$cl-paleblue: #8AC4FF;
+$cl-frenchblue: #476C9B;
 $cl-mediumblue: #8edce6;
 
 //heading backgrounds
 $heading-bg1: #297373;
-$heading-bg2: #393e41;
-$heading-bg3: #ddeadc;
+$heading-bg2: #eb1919;
+$heading-bg3: #8AC4FF;
+
+$heading-cl: #5D576B;
 
 //for rgba background effect
 @mixin rgba-bg ($alpha) {
@@ -55,10 +57,11 @@ $heading-bg3: #ddeadc;
 
 h1, h2, h3{
     font-family: $titles-font;
+    color: $heading-cl;
 }
 h2{
     color: white;
-    background-color: $heading-bg1;
+    background-color: $heading-bg3;
     padding: .3em .5em;
 }
 h3{
@@ -75,7 +78,7 @@ ul{
 }
 
 a{
-    color: $cl-frenchblue;
+    color: $cl-paleblue;
 }
 a:hover{
     color: #4662cf;
@@ -89,6 +92,9 @@ a:hover{
     background-attachment: fixed;
     background-size: contain;
     position: relative;
+    h1{
+        color: white;
+    }
     #rgba{
         @include rgba-bg(.5);
         color: white;
