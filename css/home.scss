@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth');
-@import url('header.css');
-
+@import url('http://weloveiconfonts.com/api/?family=entypo');
+/*
+    Author: Bruno Lima
+*/
 //fonts
 $titles-font: 'Amaranth', sans-serif;
 
@@ -26,6 +28,18 @@ $heading-bg3: #ddeadc;
     background-color: rgba(0, 0, 0, $alpha);
 }
 
+// for box shadow - $alpha is the opacity value between 0 and 1
+@mixin shadow1 ($aplha) {
+    -webkit-box-shadow: 0 18px 6px -16px rgba(0,0,0,$aplha);
+    -moz-box-shadow: 0 18px 6px -16px rgba(0,0,0,$aplha);
+    box-shadow: 0 18px 6px -16px rgba(0,0,0,$aplha);
+}
+@mixin shadow2 ($aplha) {
+    -webkit-box-shadow: 0 8px 15px -2px rgba(0,0,0,$aplha);
+    -moz-box-shadow: 0 8px 15px -2px rgba(0,0,0,$aplha);
+    box-shadow: 0 8px 15px -2px rgba(0,0,0,$aplha);
+}
+
 @mixin transitions ($transition) {
 	-webkit-transition: $transition;  
 	-moz-transition:    $transition;
@@ -34,9 +48,14 @@ $heading-bg3: #ddeadc;
     transition:         $transition;  
 }
 
-// h1, h2, h3{
-//     font-family: $titles-font;
-// }
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+
+h1, h2, h3{
+    font-family: $titles-font;
+}
 h2{
     color: white;
     background-color: $heading-bg1;
@@ -55,44 +74,52 @@ ul{
     list-style: none;
 }
 
-// #banner{
-//     height: 20em;
-//     width: 100%;
-//     background-image:  url("../img/home-banner3.jpg");
-//     background-attachment: fixed;
-//     background-size: contain;
-//     position: relative;
-//     #rgba{
-//         @include rgba-bg(.5);
-//         color: white;
-//         height: 100%;
-//     }
-//     #course-name{
-//         font-family: $titles-font;
-//         font-size: 2em;
-//     }
-//     #some-links{
-//         li{
-//             display: inline-block;
-//             margin-left: .5em;
-//         }
-//         a{
-//             color: white;
-//             padding: .5em;
-//             border-bottom: .1em solid $cl-paleblue;
-//             @include transitions(.4s);
-//         }
-//         a:hover{
-//             text-decoration: none;
-//             background-color: $cl-paleblue;
-//             color: black;
-//         }
-//     }
-// }
+a{
+    color: $cl-frenchblue;
+}
+a:hover{
+    color: #4662cf;
+    text-decoration: none;
+}
 
-// #nav-div{
-//     border-bottom: .1em solid lightgray;
-// }
+#banner{
+    height: 20em;
+    width: 100%;
+    background-image:  url("../img/home-banner3.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    position: relative;
+    #rgba{
+        @include rgba-bg(.5);
+        color: white;
+        height: 100%;
+    }
+    #course-name{
+        font-family: $titles-font;
+        font-size: 2em;
+    }
+    #some-links{
+        li{
+            display: inline-block;
+            margin-left: .5em;
+        }
+        a{
+            color: white;
+            padding: .5em;
+            border-bottom: .1em solid $cl-paleblue;
+            @include transitions(.4s);
+        }
+        a:hover{
+            text-decoration: none;
+            background-color: $cl-paleblue;
+            color: black;
+        }
+    }
+}
+
+#nav-div{
+    border-bottom: .1em solid lightgray;
+}
 
 .sticky {
     position: fixed;
@@ -101,21 +128,21 @@ ul{
     z-index: 10;
 }
 
-// #dropdown1{
-//     position: relative;    
-//     #menu-dropdown1{
-//         position: absolute;
-//         top: 2em;
-//     }
-// }
+#dropdown1{
+    position: relative;    
+    #menu-dropdown1{
+        position: absolute;
+        top: 2em;
+    }
+}
 
-// #more-dropdown2{
-//     position: relative;    
-//     #menu-dropdown2{
-//         position: absolute;
-//         top: 2em;
-//     }
-// }
+#more-dropdown2{
+    position: relative;    
+    #menu-dropdown2{
+        position: absolute;
+        top: 2em;
+    }
+}
 
 #main-content, .extra-content{
     background-color: $bg-main;
@@ -157,6 +184,10 @@ aside h3{
     background-color: $bg-platinum;
 }
 
+#padd{
+    padding: 1em;
+}
+
 .extra-content{
     div{
         padding: 1em;
@@ -168,19 +199,26 @@ aside h3{
 
 #examples{
     padding: 1em;
-    .carousel-indicators{
-        bottom: 3.5em;
-    }
     h4{
         border-bottom: .1em solid $cl-gunmental;
         margin-left: auto;
         margin-right: auto;
-        width: 20%;
+        width: 8em;
         text-align: center;
     }
 
     #carouselExampleIndicators{
         background-color: #aaaaaa;
+        @include transitions(.6s);
+        @include shadow1(.8);
+        
+        .carousel-item{
+            height: 33em;
+        }
+        .carousel-indicators{
+            bottom: 3.5em;
+            z-index: 1;
+        }
         .carousel-caption{
             @include rgba-bg(.4);
             h3{
@@ -189,10 +227,116 @@ aside h3{
             }
         }
     }
-    .carousel-item{
-        height: 33em;
+    #carouselExampleIndicators:hover{
+        @include shadow2(.8);
+        width: auto + 50px;
+        height: auto;
+    }
+
+    
+    .my-btn{
+        border: 0;
+        width: 6.7em;
+        border-bottom: .3em solid $cl-independence;
+        background-color: transparent;
+        text-align: center;
+        @include transitions(.2s);
+    }
+    .my-btn:hover{
+        cursor: pointer;
+        background-color: $cl-independence;
+        color: white;
+    }
+
+    #example2{
+        display: flex;
+        flex-flow: row wrap;
+        figure{
+            background-color: $cl-paleblue;
+            flex: 6;
+            padding: 1em;
+            border-radius: .6em;
+            @include shadow1(.8);
+            @include transitions(.5s);
+            img{
+                max-width: 30%;
+                max-height: 30%;
+                @include transitions(.5s);
+            }
+            figcaption{
+                font-size: 2em;
+                padding: .5m 3em;
+                width: 4.5em;
+                float: right;
+                text-align: center;
+            }
+        }
+        div{
+            flex: 1;
+            p{
+                border-bottom: .3em solid $cl-independence;
+                text-align: center;
+                @include transitions(.2s);
+            }
+            p:hover{
+                cursor: pointer;
+                background-color: $cl-independence;
+                color: white;
+            }
+        }
+    }
+
+    #example3{
+        display: flex;
+        flex-flow: row wrap;
+        ul{
+            list-style: none;
+        }
+        li{
+            margin: .7em 0;
+        }
+        div:first-child{
+
+            flex: 8;
+        }
+        div:first-child div{
+            display: flex;
+            overflow: hidden;
+            height: 10em;
+            width: 15em;
+            background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff8888), color-stop(0.3, #ffffff), color-stop(0.7, #ffffff), color-stop(1, #ff8888));
+            background: -moz-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+            background: -webkit-linear-gradient(left,  #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+            background: -o-linear-gradient(left,  #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+            background: -ms-linear-gradient(left,  #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+            background: linear-gradient(left,  #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+            @include shadow1(.8);
+            p{
+                margin: auto;
+                font-weight: 700;
+                font-size: 2em;
+                color: gray;
+                border: 0 solid gray;
+            }
+        }
+
+        div:nth-child(even){
+            flex: 1;
+        }
+
+        div:last-child{
+            flex: 1;
+        }
     }
 }
+
+.entypo-up-circled{
+    color: black;
+    font-size: 3em;
+    text-align: center;
+    display: block;
+}
+
 
 footer{
     background-color: $cl-independence;
@@ -211,22 +355,30 @@ footer{
     }
 }
 
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1200px){
-    // #some-links{
-    //     li{
-    //         display: block;
-    //         margin-bottom: 1em;
-    //         margin-right: 0;
-    //     }a{
-    //         padding: .1em;
-    //     }
-    // }
-    // #banner{
-    //     height: 17em;
-    //     h1{
-    //         font-size: 2em;
-    //     }
-    // }
+    #some-links{
+        li{
+            display: block;
+            margin-bottom: 1em;
+            margin-right: 0;
+        }a{
+            padding: .1em;
+        }
+    }
+    #banner{
+        height: 17em;
+        h1{
+            font-size: 2em;
+        }
+    }
     #examples{
         .carousel-item{
             height: 23em;
@@ -235,63 +387,79 @@ footer{
             background-position: center;
             background-image: url('img/slideshow/responsive_background.jpg')
         }
-    }
-}
-
-// @media screen and (max-width: 1015px){
-//     #banner{
-//         height: 14em;
-//         h1{
-//             font-size: 1.5em;
-//         }
-//         p{
-//             font-size: .8em;
-//         }
-//     }
-// }
-@media screen and (max-width: 991px){
-    // #banner{
-    //     #some-links{
-    //         a{
-    //             background-color: $cl-paleblue;
-    //             padding: .2em;
-    //         }
-    //     }
-    // }
-    #examples{
-        .carousel-indicators{
-            bottom: 5.5em;
-        }
-        .carousel-item{
-            height: 18em;
+        #carouselExampleIndicators > ol{
+            bottom: 1em;
         }
         .carousel-caption{
-            bottom: 3.5em;
+            bottom: 7.5em;
+        }
+        #example2{
+            figure{
+                figcaption{
+                    float: none;
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1015px){
+    #banner{
+        height: 14em;
+        h1{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .8em;
+        }
+    }
+    
+}
+@media screen and (max-width: 991px){
+    #banner{
+        #some-links{
+            a{
+                padding: .2em;
+            }
+        }
+    }
+    #carouselExampleIndicators > div{
+        height: 28em;
+        padding: 0;
+        margin-top: -5em;
+    }
+}
+
+@media screen and (max-width: 840px){
+    #banner{
+        background-image: url("../img/home-banner-mini.jpg");
+        background-size: unset;
+        background-position-x: 100%;
+        background-attachment: fixed;
+        h1{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .5em;
+        }
+        #some-links{
+            a{
+                padding: .2em;
+            }
         }
     }
 }
 
-// @media screen and (max-width: 840px){
-//     #banner{
-//         background-image: url("../img/home-banner-mini.jpg");
-//         background-attachment: fixed;
-//         background-size: contain;
-//         h1{
-//             font-size: 1.5em;
-//         }
-//         p{
-//             font-size: .5em;
-//         }
-//         #some-links{
-//             a{
-//                 background-color: $cl-paleblue;
-//                 padding: .2em;
-//             }
-//         }
-//     }
-// }
-
 @media screen and (max-width: 767px){
+    .row{
+        display: flex;
+    }
+    #aside{
+        order: 1;
+    }
+    #not-aside{
+        order: 2;
+    }
     #examples{
         .carousel-indicators{
             bottom: 1em;
@@ -302,35 +470,48 @@ footer{
         .carousel-caption{
             bottom: 3.5em;
         }
+
+        #example2{
+            flex-flow: column wrap;
+        }
     }
 }
 
-// @media screen and (max-width: 575px){
-//     #banner{
-//         background-size: unset;
-//         background-position-x: 90%;
-//         #course-name{
-//             position: absolute;
-//             left: 3.3em;
-//             h1{
-//                 font-size: 1.1em;
-//             }
-//             p{
-//                 font-size: .5em;
-//             }
-//         }
-//         #some-links{
-//             position: absolute;
-//             top: 0;
-//             right: 1em;
-//             ul{
-//                 li{
-//                     display: inline-block;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media screen and (max-width: 575px){
+    #banner{
+        background-image: url("../img/home-banner-mini.jpg");
+        #course-name{
+            position: absolute;
+            left: 3.3em;
+            h1{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: .5em;
+            }
+        }
+        #some-links{
+            position: absolute;
+            top: 0;
+            right: 1em;
+            ul{
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    #carouselExampleIndicators > div{
+        height: 25em;
+        padding: 0;
+        margin-top: -8em;
+    }
+    #carouselExampleIndicators > ol{
+        padding: .5em;
+        background-color: rgba(39, 35, 58, 0.376);
+    }
+}
 
 @media screen and (max-width: 400px){
     #examples{
@@ -342,3 +523,20 @@ footer{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
