@@ -1,0 +1,155 @@
+/*
+	Author: Gail Goncalves
+	Date: June 4/2018
+*/
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+html, body, nav, ul, li, a, span{
+	margin:0;
+	padding:0;
+}
+
+header img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+	
+   	    
+}
+table {
+	width:100%;
+	
+}
+table, th, td {
+    border: 2px solid black;
+	padding:5px;
+}
+h1{
+	line-height:400%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+	background-color:blue;
+	color:white;
+	text-align:center;
+	
+	
+}
+h2{
+	font-family:georgia;
+	color:#FFFFFF;
+	background-color:#0F81A1;
+	padding-left:10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}	
+p{
+	padding-left:10px;
+	padding-top: 10px;
+}
+li{
+	padding-left:10px;
+	padding-top: 10px;
+}	
+ul{
+	padding-left:20px;
+	padding-top: 20px;
+}
+h3{
+	color:#0F81A1;
+	padding-left:10px;
+	padding-top: 10px;
+}
+h4,h5{
+	color:#808080;
+	padding-left:10px;
+	padding-top: 10px;
+}
+nav {
+text-align: center;
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: #50A6C2;
+}
+
+nav li {
+    float: left;
+	
+	
+	margin:0;
+	padding:0;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a{
+
+   display: inline-block;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
+}
+nav li a:active {
+    background-color: purple;
+}
+
+
+
+td a:link {
+    color: #50A6C2;
+}
+td a:visited {
+    color: #50A6C2;
+}
+td a:hover {
+    
+	background-color:black;
+}
+
+footer{
+	text-align: center;
+	font-size:.70em;
+	font-style:italic;
+}
+.borderblack {
+    margin: auto;
+ 
+    border: 3px solid black;
+    padding: 10px;
+}
+.background{
+	color:black;
+	
+	
+	background-image: url("../images/background-h1.jpg");
+}
+
+#container
+{
+  width:80%;
+  margin-left:10%;
+  background-color:#f1f1f1;
+  padding-left: 20px;
+}
