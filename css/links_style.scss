@@ -13,17 +13,23 @@
 
 $backgroundColor: #f2f2f2;
 $boxBgColor: #476C9B;
+$accentColor: #61a4b0;
 $codeColor: #5ca6f2;
 $h2HeadingBgColor: #8AC4FF;
 $h2HeadingFontColor: #5D576B;
-$h3HeadingBgColor: rgb(235, 25, 25);
+$h3HeadingBgColor: $boxBgColor;
 $h3HeadingFontColor: #FFF;
+$darkColor: black;
+// $navBgColor: #b3d4fc;
+// $navHoverColor: lightpink;
+// $navFontColor: #5f530d;
 $footerFontColor: white;
 $footerBgColor: #555;
+
 $tablePrimaryColor: #DDD;
 $tableSecondaryColor: #f2f2f2;
 $noFontColor: #FFF;
-$boxDarkBackground: #A9A9A9;
+
 
 
 
@@ -110,7 +116,7 @@ textarea {
 
 #body_wrapper{
     background-color: $backgroundColor;
-    padding:15px;
+    padding:0px 15px;
     max-width: 1024px;
     margin: auto;
 }
@@ -120,6 +126,9 @@ textarea {
     text-align: center;
     grid-template-columns: 325px 325px 325px;
     grid-template-rows: 260px 260px;
+    /* Grid Gap - sets spacing between grid elements */
+    /* Grid Gap is shorthand for grid-column-gap and grid-row-gap 	*/
+    /* grid-gap: [row-gap] [column-gap]	*/
     grid-gap: 2px;	
 
     h2
@@ -131,6 +140,7 @@ textarea {
     }
 }
 
+
 #background_image_fixed{
     background-attachment: fixed;
     background-image: url(../img/leafer.png);
@@ -139,6 +149,7 @@ textarea {
     height: 150px;
 }
 
+
 main{
     ul, ol{
         margin-top: 10px;
@@ -146,7 +157,6 @@ main{
 
     section{
         margin:0;
-
         h2{
             background-color: $h2HeadingBgColor;
             color: $h2HeadingFontColor;
@@ -184,46 +194,37 @@ main{
     }
 }
 
-.box_content{
-    padding-top: 15px;
-}
-
 .lecture_content fieldset{
     margin:10px;
 }
-
-.video_heading{
-    max-width: 640px;
-    margin-left: 5px;
-}
-
 .top_of_page{
     text-align: center;
     height: 40px;
     padding: 7px 10px; 
-    color:red;
+    color:$accentColor;
 }
-
-footer{
+.go_to_top{
     text-align: center;
     height: 40px;
-    background-color: $footerBgColor;
     padding: 7px 10px;
 
-    a:link{
-        text-decoration: none;
-        font-size: 13px;
-        color: $footerFontColor;
-    }
-
-    a:visited{
-        color: $footerFontColor;
-    }
-
-    p{
-        margin:0px;
-    }
 }
+footer {
+    text-align: center;
+    height: 60px;
+    background-color: #555;
+    padding: 7px 10px;
+}
+    
+
+   
+
+footer p {
+    padding: 0;
+    
+    margin:0;
+}
+
 
 
 
@@ -320,12 +321,58 @@ footer{
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+
+/*
+Print Attributes
+*/
+
+@media print{
+	h1, h2, h3, h4, h5, h6{
+		page-break-after:avoid;
+    }
+    section{
+        page-break-inside: avoid;
+    }
+	nav{
+		display:none;
+	}
+	header{
+		display:none;
+	}
+	
+	footer{
+		display:none;
+    }
+    p{
+        display:none;
+    }
+		
+	section [id="videos"]{
+        display:none;
+    }
+    section [id="banner"]{
+        p{
+            display:none;
+        }
+        
+    }
+    body [id="some-links"]{
+        display:none;
+        						
+    }
+    body [id="videos"]{
+       display:none;
+    }
+    
+	a[href^="http"]::after{
+		content:"URL:(" attr(href) ")";	
+		float: left !important;
+		padding-top:10px !important;
+	}
+	
+	
 }
+
 
 @media (max-width: 1000px) {
     #container {
@@ -354,81 +401,6 @@ footer{
     }
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
 
 .links table {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -456,6 +428,19 @@ footer{
     color: $noFontColor;
   }
   
+  .bottom_space{
+    margin-bottom: 20px;
+}
+.top_space{
+    margin-top: 20px;
+}
+.padding_top{
+    padding-top: 10px;
+}
+main p{
+    margin:0;
+    
+}
  .heading_special{
       background-color:$boxBgColor;
       color: $noFontColor; 
@@ -463,22 +448,24 @@ footer{
       margin:0;
   }
   .card-text{
-    color: $noFontColor;
-    background-color: $boxDarkBackground; 
+    color: $darkColor;
+    background-color: $tablePrimaryColor; 
     margin:0;
     padding:30px;
   }
-  .card-body{
+  .card_body_padding{
       padding:0;
   }
   .card-footer{
       background-color:$tablePrimaryColor;
   }
   .btn-primary{
-      background-color:$boxDarkBackground;
+      background-color:$tablePrimaryColor;
   }
   .video-field{
       margin-left:20px;
        
   }
+  
+  
   
