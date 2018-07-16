@@ -157,9 +157,17 @@ legend {
   padding: 0px 2px;
 }
 
+#background_image {
+  background-attachment: fixed;
+  background-image: url("../img/lecture03/leafer.png");
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
 #background_image_fixed {
   background-attachment: fixed;
-  background-image: url(../img/lecture03/leafer.png);
+  background-image: url("../img/lecture03/leafer.png");
   border: 1px solid black;
   width: 150px;
   height: 150px;
@@ -169,20 +177,20 @@ legend {
   margin: 5px;
 }
 
-#sprite_img {
+.sprite_img {
   border: 2px dashed dimgray;
   margin: 5px 10px;
   padding: 1px;
 }
 
-#sprite_container {
+.sprite_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   float: left;
 }
 
-#sprite_container + dl {
+.sprite_container + dl {
   clear: both;
 }
 

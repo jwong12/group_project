@@ -1,331 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-    <!--
-        Author: Bruno Lima
-    -->
-    <head>
-        <title>-progress...COMP1950 | BCIT</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="The series of lectures from the COMP 1950 course - Web Development and Design 2">
-        <meta name="author" content="Bruno Lima">
+<!doctype html>
+<html class="no-js" lang="en">
+<!--
+    Author: James Wong
+    Date: July 15, 2018
+-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Project Meta Site</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <!-- <link rel="stylesheet" href="/students/jwong695/css/normalize.css"> -->
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-        <!--  Main css style  -->
-        <link rel="stylesheet" href="css/home.min.css">
-
-        <!--  Printer style  -->
-        <link rel="stylesheet" href="css/home_printer_style.min.css">
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/home.js"></script>
-    </head>
-  <body>
-    <div id="banner">
-        <div id="rgba">
-            <div class="container">
-                <header>
-                    <br/><br/>
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3 col-md-2">
-                            <img alt="logo" src="img/logo.png" />
-                        </div>
-                        <div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
-                            <h1>COMP1950</h1>
-                            <p>Web Development And Design 2</p>
-                        </div>
-                        <div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
-                            <ul>
-                                <li><a href="https://www.bcit.ca/" target="_blank">BCIT</a></li>
-                                <li><a href="https://id.bcit.ca/my.policy" target="_blank">D2L</a></li>
-                                <li><a href="https://my.bcit.ca/cp/home/displaylogin" target="_blank">MyBCIT</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-            </div>
-        </div>
+<body>
+    <div id="content_wrapper">
+        <header>
+            <h1>COMP 1950 Project</h1>
+        </header>
+        <main>
+            <h2>Introduction</h2>
+            <dl>
+                <dt>Students:</dt>
+                <dd>Bruno Lima </dd>
+                <dd>Gail Goncalves</dd>
+                <dd>James Wong</dd>
+            </dl>
+            <p>Bruno created the home prototype page and the navigation bar.</p>
+            <p>Gail created the rationale HTML and useful links prototype page.</p>
+            <p>James created the introduction, sitemap and lecture prototype page.</p>
+            <ul>
+                <li><a href="/students/jwong695/html/home.html">Prototype: Homepage</a></li>
+                <li><a href="/students/jwong695/html/lecture04.html">Prototype: Lecture 04</a></li>
+                <li><a href="/students/jwong695/html/links.html">Prototype: Useful Links</a></li>
+                <li><a href="/students/jwong695/html/sitemap.html">Sitemap</a></li>
+                <li><a href="/students/jwong695/html/rationale.html">Rationale</a></li>
+            </ul>
+        </main>
     </div>
+    <footer>
+        <p>Created by Bruno Lima, Gail Goncalves & James Wong. &copy; Spring 2018</p>
+    </footer>
 
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 
-    
-    <div id="nav-div" class="bg-light">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"><img alt="logo" src="img/logo2.png"></a>
-                <button class="navbar-toggler" type="button"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    
-                    <li id="dropdown1" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"    role="button" data-toggle="dropdown" aria-haspopup="true"         aria-expanded="false">
-                        Lectures
-                        </a>
-                        <div id="menu-dropdown1" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="lecture/01.html">Session 1</a>
-                            <a class="dropdown-item" href="lecture/02.html">Session 2</a>
-                            <a class="dropdown-item" href="lecture/03.html">Session 3</a>
-                            <a class="dropdown-item" href="lecture/04.html">Session 4</a>
-                            <a class="dropdown-item" href="lecture/05.html">Session 5</a>
-                            <a class="dropdown-item" href="lecture/06.html">Session 6</a>
-                            <a class="dropdown-item" href="lecture/07.html">Session 7</a>
-                            <a class="dropdown-item" href="lecture/08.html">Session 8</a>
-                            <a class="dropdown-item" href="lecture/09.html">Session 9</a>
-                            <a class="dropdown-item" href="lecture/10.html">Session 10</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="resources.html">Resources</a>
-                    </li>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html" id="navbarDropdown2">Contact</a>
-                    </li>
-
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-                </nav>
-        </div>
-    </div>
-
-    <div id="mc" class="container">
-        <div class="row">
-            <div id="not-aside" class="col-xs-12 col-md-8">
-                <div id="main-content">
-                    <main>
-                        <h2>COMP 1950</h2>
-                        <p>This hands-on course follows on from <a href="http://www.bcit.ca/study/courses/comp1850" target="_blank">COMP 1850</a> Applied Web Development Level 1. Students who already understand HTML and CSS will explore web development in more depth with new topics and techniques. Participants will gain a deeper understanding of the latest technologies including HTML5 and CSS3 for developing web sites and applications. There is a focus on responsive design and mobile presentation through the use of Media Queries. Adding behavior to web sites using JavaScript frameworks such as jQuery is introduced. Labs and exercises focus on industry standard web development methodology.</p>
-        
-                        <p>COMP 1950 is a required course for the BCIT Computing Advanced Web Technologies associate certificates in Applied Web Development, AWD and Web and Mobile Application Development, WMA, as well as an elective in the CST Diploma.</p>
-                        
-                        <p>COMP 1950 and <a href="https://www.bcit.ca/study/courses/comp2015" target="_blank"> COMP 2015</a> are also the prerequisites for <a href="https://www.bcit.ca/study/courses/comp2052" target="_blank">COMP 2052</a> Android and Mobile Application Development Tools. By the end of this course successful students will be able to build dynamic and semantically marked-up content providing Search Engine Optimized (SEO) pages.</p>
-
-                        <p>Code validators:</p>              
-                    </main>
-                    <div id="btns" class="col-xs-12">
-                        <a class="div-button" href="https://validator.w3.org/" target="_blank">
-                            HTML
-                        </a>
-                        <a class="div-button" href="https://jigsaw.w3.org/css-validator/" target="_blank">
-                            CSS
-                        </a>
-                        <a class="div-button" href="https://codebeautify.org/jsvalidate" target="_blank">
-                            Javascript
-                        </a>
-                    </div>
-                    <br/><br/>
-                    
-                </div>
-        
-                <div class="extra-content">
-                    <div>
-                        <section>
-                            <h2>Learning Outcomes</h2>
-                            <p>Upon successful completion of this course, the student will be able to:</p>
-                            <ul>
-                                <li>Mark up pages using latest HTML technologies, including HTML5.</li>
-                                <li>Utilize CSS to control page layout and presentation, including CSS3.</li>
-                                <li>Add behaviour to any web page using JavaScript.</li>
-                                <li>Create dynamic content using JavaScript frameworks like jQuery.</li>
-                                <li>Employ Web Standards when building web sites for maximum compatibility.</li>
-                                <li>Understand concepts for Search Engine Optimized content (SEO).</li>
-                                <li>Implement Server Side Includes for efficient web development.</li>
-                                <li>Create template-driven pages for use in Content Management systems.</li>
-                                <li>Understand basic development methodology.</li>
-                                <li>Use media queries to create Responsive designs for mobile and desktop presentation.</li>
-                                <li>Use HTML5 technologies to present rich content such as video, audio and geolocation.</li>
-                                <li>Create professional looking typography using web-based fonts.</li>
-                                <li>Understand source control using GIT.</li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        
-            <div id="aside" class="col-xs-12 col-md-4">
-                <aside>
-                    <h3>Notice</h3>
-                    <p>This website is for BCIT students of COMP 1950.</p>
-                    <p>You are in one of the following iterations:</p>
-                    <ul>
-                        <li>Tuesday</li>
-                        <li>Thursday</li>
-                        <li>Monday / Wednesday</li>
-                    </ul>
-                    <p>Check the <a href="https://www.bcit.ca/study/courses/comp1950" target="_blank"> catalogue at course BCIT</a> to see when this course is running next.</p>
-                </aside>
-            </div>
-        </div>
-
-        
-
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <div id="examples" class="extra-content">
-                    <h3>Example of Outcomes</h3>
-                    <section>
-                        <p>The COMP1950 introduces you to the dynamic behaviour of a website through use of javascript which is a client-side scripting language meant to be a powerfull programming language for dynamic behaviour (working with events). It has good libraries such as Jquery which improves readability by making you code less.</p>
-                        <p>Check out these examples...</p>
-                        <h4>Carousel effect</h4>
-                        <section>
-                            <p>You can create slideshows with automatic switches of background. The time it takes to switch is measured in miliseconds</p>
-                            
-                            <!--
-                                The Carousel Effect starts here.
-                                Implemented by Gail
-                            -->
-                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                                </ol>
-                                <div class="carousel-inner" role="listbox">
-                                <!-- Slide One - Set the background image for this slide in the line below -->
-                                <div class="carousel-item active" style="background-image: url('img/slideshow/html5_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>HTML5</h3>
-                                    <p>Increased Semantic Value</p>
-                                    </div>
-                                </div>
-                                <!-- Slide Two - Set the background image for this slide in the line below -->
-                                <div class="carousel-item" style="background-image: url('img/slideshow/css3_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>CSS3</h3>
-                                    <p>Captivate Your Audience with Styling Options</p>
-                                    </div>
-                                </div>
-                                <!-- Slide Three - Set the background image for this slide in the line below -->
-                                <div class="carousel-item" style="background-image: url('img/slideshow/responsive_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>Responsive Design</h3>
-                                    <p>Design Websites that Work on all Device Types</p>
-                                    </div>
-                                </div>
-                                <!-- Slide Four - Set the background image for this slide in the line below -->
-                                <div class="carousel-item" style="background-image: url('img/slideshow/seo_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>SEO - Search Engine Optimization</h3>
-                                    <p>Create Websites that will be Found by Search Engines</p>
-                                    </div>
-                                </div>
-                                <!-- Slide Five - Set the background image for this slide in the line below -->
-                                <div class="carousel-item" style="background-image: url('img/slideshow/javascript_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>Javascript</h3>
-                                    <p>Create interaction with Javascript Engaging Students</p>
-                                    </div>
-                                </div>
-                                <!-- Slide Six - Set the background image for this slide in the line below -->
-                                <div class="carousel-item" style="background-image: url('img/slideshow/jquery_background.jpg')">
-                                    <div class="carousel-caption d-none d-md-block">
-                                    <h3>JQuery</h3>
-                                    <p>Utilize Javascript Code Written By Others</p>
-                                    </div>
-                                </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </section>
-                        <br/><br/><br/><br/>
-                        
-                        
-                        <section>
-                            <h4>Example2</h4>
-                            <p>You can change CSS properties of HTML elements with click event</p>
-                            <div id="example2">
-                                <figure>
-                                    <img id="expand-image" alt="example 2" src="img/nature.jpg" />
-                                    <figcaption id="caption">Theme 1</figcaption>
-                                </figure>
-                                <div>
-                                    <p class="my-btn" id="resize">Resize image</p>
-                                    <br/>
-                                    <p class="my-btn" id="change-theme">Change theme</p>
-                                </div>
-                            </div>
-                        </section>
-                        <br/><br/><br/><br/>
-                        
-                        <section>
-                            <h4>Example3</h4>
-                            <p>You can create animations using click events. They can work simultaneously.</p>
-                            <div id="example3">
-                                <div>
-                                    <div id="preview">
-                                        <p id="pv-text">PREVIEW</p>
-                                    </div>
-                                </div>
-                                <div id="hovers">
-                                    <ul>
-                                        <li><p id="focus" class="my-btn">Focus text</p></li>
-                                        <li><p id="res-fast" class="my-btn">Resize fast</p></li>
-                                        <li><p id="res-slow" class="my-btn">Resize Slow</p></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </section>
-                </div>
-                
-            </div>
-        </div>
-    
-        <br/>
-        <a href="#" id="top" class="entypo-up-circled"></a>
-        <br/>
-    </div>
-    <div class="container">
-        <div class="row">
-            <footer class="col-md-12">
-                <div>
-                    <p>&copy; COMP 1950 Website</p>
-                </div>
-                <p>Project Intro:</p>
-                <a href="intro.html">Intro</a>
-            </footer>
-        </div>
-    </div>
-    
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </body>
 </html>
