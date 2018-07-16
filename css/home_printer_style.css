@@ -1,0 +1,52 @@
+/*
+    Author: Bruno Lima
+*/
+@media print {
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    color: black;
+  }
+  a:link, a:visited {
+    color: #330099;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: underline;
+  }
+  a[href^="http"]:after {
+    content: " (URL: " attr(href) ") ";
+  }
+  aside > h3 {
+    color: black;
+  }
+  body, .container, footer {
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: black;
+  }
+  #some-links {
+    display: none;
+  }
+  #btns {
+    display: none;
+  }
+  #examples {
+    display: none;
+  }
+  #mc > a {
+    display: none;
+  }
+  footer > p, footer > a {
+    display: none;
+  }
+  .extra-content {
+    margin-top: -5em;
+  }
+  footer {
+    margin-top: -3em;
+  }
+}

@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Amaranth");
-@import url("header.css");
+@import url("http://weloveiconfonts.com/api/?family=entypo");
+/*
+    Author: Bruno Lima
+*/
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Amaranth", sans-serif;
+  color: #5D576B;
+}
+
 h2 {
   color: white;
-  background-color: #297373;
+  background-color: #8AC4FF;
   padding: .3em .5em;
 }
 
 h3 {
-  background-color: #ddeadc;
-  border-left: 0.4em solid #7692ff;
+  background-color: #8AC4FF;
+  border-left: 0.4em solid #476C9B;
   padding-left: .5em;
 }
 
@@ -20,11 +32,88 @@ ul {
   list-style: none;
 }
 
+a {
+  color: #8AC4FF;
+}
+
+a:hover {
+  color: #4662cf;
+  text-decoration: none;
+}
+
+#banner {
+  height: 20em;
+  width: 100%;
+  background-image: url("../img/home-banner3.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+  position: relative;
+}
+
+#banner h1 {
+  color: white;
+}
+
+#banner #rgba {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+}
+
+#banner #course-name {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2em;
+}
+
+#banner #some-links li {
+  display: inline-block;
+  margin-left: .5em;
+}
+
+#banner #some-links a {
+  color: white;
+  padding: .5em;
+  border-bottom: 0.1em solid #8AC4FF;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#banner #some-links a:hover {
+  text-decoration: none;
+  background-color: #8AC4FF;
+  color: black;
+}
+
+#nav-div {
+  border-bottom: .1em solid lightgray;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+#dropdown1 {
+  position: relative;
+}
+
+#dropdown1 #menu-dropdown1 {
+  position: absolute;
+  top: 2em;
+}
+
+#more-dropdown2 {
+  position: relative;
+}
+
+#more-dropdown2 #menu-dropdown2 {
+  position: absolute;
+  top: 2em;
 }
 
 #main-content, .extra-content {
@@ -64,13 +153,17 @@ aside {
 
 aside h3 {
   color: white;
-  background-color: #393e41;
+  background-color: #eb1919;
   padding: .3em .5em;
   border: none;
 }
 
 #mc {
   background-color: #e5e9ec;
+}
+
+#padd {
+  padding: 1em;
 }
 
 .extra-content div {
@@ -85,20 +178,33 @@ aside h3 {
   padding: 1em;
 }
 
-#examples .carousel-indicators {
-  bottom: 3.5em;
-}
-
 #examples h4 {
   border-bottom: 0.1em solid #27233a;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 8em;
   text-align: center;
 }
 
 #examples #carouselExampleIndicators {
   background-color: #aaaaaa;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+}
+
+#examples #carouselExampleIndicators .carousel-item {
+  height: 33em;
+}
+
+#examples #carouselExampleIndicators .carousel-indicators {
+  bottom: 3.5em;
+  z-index: 1;
 }
 
 #examples #carouselExampleIndicators .carousel-caption {
@@ -110,8 +216,145 @@ aside h3 {
   border: none;
 }
 
-#examples .carousel-item {
-  height: 33em;
+#examples #carouselExampleIndicators:hover {
+  -webkit-box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 15px -2px rgba(0, 0, 0, 0.8);
+  width: auto50px;
+  height: auto;
+}
+
+#examples .my-btn {
+  border: 0;
+  width: 6.7em;
+  border-bottom: 0.3em solid #505168;
+  background-color: transparent;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#examples .my-btn:hover {
+  cursor: pointer;
+  background-color: #505168;
+  color: white;
+}
+
+#examples #example2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#examples #example2 figure {
+  background-color: #8AC4FF;
+  flex: 6;
+  padding: 1em;
+  border-radius: .6em;
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#examples #example2 figure img {
+  max-width: 30%;
+  max-height: 30%;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#examples #example2 figure figcaption {
+  font-size: 2em;
+  padding: .5m 3em;
+  width: 4.5em;
+  float: right;
+  text-align: center;
+}
+
+#examples #example2 div {
+  flex: 1;
+}
+
+#examples #example2 div p {
+  border-bottom: 0.3em solid #505168;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#examples #example2 div p:hover {
+  cursor: pointer;
+  background-color: #505168;
+  color: white;
+}
+
+#examples #example3 {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#examples #example3 ul {
+  list-style: none;
+}
+
+#examples #example3 li {
+  margin: .7em 0;
+}
+
+#examples #example3 div:first-child {
+  flex: 8;
+}
+
+#examples #example3 div:first-child div {
+  display: flex;
+  overflow: hidden;
+  height: 10em;
+  width: 15em;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ff8888), color-stop(0.3, #ffffff), color-stop(0.7, #ffffff), color-stop(1, #ff8888));
+  background: -moz-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -webkit-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -o-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: -ms-linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  background: linear-gradient(left, #ff8888 0%, #ffffff 30%, #ffffff 70%, #ff8888 100%);
+  -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
+}
+
+#examples #example3 div:first-child div p {
+  margin: auto;
+  font-weight: 700;
+  font-size: 2em;
+  color: gray;
+  border: 0 solid gray;
+}
+
+#examples #example3 div:nth-child(even) {
+  flex: 1;
+}
+
+#examples #example3 div:last-child {
+  flex: 1;
+}
+
+.entypo-up-circled {
+  color: black;
+  font-size: 3em;
+  text-align: center;
+  display: block;
 }
 
 footer {
@@ -138,6 +381,20 @@ footer a:hover {
 }
 
 @media screen and (max-width: 1200px) {
+  #some-links li {
+    display: block;
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+  #some-links a {
+    padding: .1em;
+  }
+  #banner {
+    height: 17em;
+  }
+  #banner h1 {
+    font-size: 2em;
+  }
   #examples .carousel-item {
     height: 23em;
     background-size: contain;
@@ -145,21 +402,69 @@ footer a:hover {
     background-position: center;
     background-image: url("img/slideshow/responsive_background.jpg");
   }
+  #examples #carouselExampleIndicators > ol {
+    bottom: 1em;
+  }
+  #examples .carousel-caption {
+    bottom: 7.5em;
+  }
+  #examples #example2 figure figcaption {
+    float: none;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  #banner {
+    height: 14em;
+  }
+  #banner h1 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: .8em;
+  }
 }
 
 @media screen and (max-width: 991px) {
-  #examples .carousel-indicators {
-    bottom: 5.5em;
+  #banner #some-links a {
+    padding: .2em;
   }
-  #examples .carousel-item {
-    height: 18em;
+  #carouselExampleIndicators > div {
+    height: 28em;
+    padding: 0;
+    margin-top: -5em;
   }
-  #examples .carousel-caption {
-    bottom: 3.5em;
+}
+
+@media screen and (max-width: 840px) {
+  #banner {
+    background-image: url("../img/home-banner-mini.jpg");
+    background-size: unset;
+    background-position-x: 100%;
+    background-attachment: fixed;
+  }
+  #banner h1 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: .5em;
+  }
+  #banner #some-links a {
+    padding: .2em;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .row {
+    display: flex;
+  }
+  #aside {
+    order: 1;
+  }
+  #not-aside {
+    order: 2;
+  }
   #examples .carousel-indicators {
     bottom: 1em;
   }
@@ -168,6 +473,42 @@ footer a:hover {
   }
   #examples .carousel-caption {
     bottom: 3.5em;
+  }
+  #examples #example2 {
+    flex-flow: column wrap;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #banner {
+    background-image: url("../img/home-banner-mini.jpg");
+  }
+  #banner #course-name {
+    position: absolute;
+    left: 3.3em;
+  }
+  #banner #course-name h1 {
+    font-size: 1.1em;
+  }
+  #banner #course-name p {
+    font-size: .5em;
+  }
+  #banner #some-links {
+    position: absolute;
+    top: 0;
+    right: 1em;
+  }
+  #banner #some-links ul li {
+    display: inline-block;
+  }
+  #carouselExampleIndicators > div {
+    height: 25em;
+    padding: 0;
+    margin-top: -8em;
+  }
+  #carouselExampleIndicators > ol {
+    padding: .5em;
+    background-color: rgba(39, 35, 58, 0.376);
   }
 }
 
