@@ -176,11 +176,30 @@ main section table, main section form, main section dl, main section p {
   padding: 7px 10px;
 }
 
+#top_bookmark {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#top_bookmark a {
+  text-decoration: none;
+  color: #1d80f7;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#top_bookmark a:hover {
+  color: #569ff7;
+}
+
 footer {
   text-align: center;
-  height: 60px;
+  height: 50px;
+  font-size: 14px;
   background-color: #555;
-  padding: 7px 10px;
+  color: white;
+  padding: 14px 10px;
 }
 
 footer p {
@@ -287,19 +306,10 @@ Print Attributes
   nav {
     display: none;
   }
-  header {
-    display: none;
-  }
   footer {
     display: none;
   }
-  p {
-    display: none;
-  }
   section [id="videos"] {
-    display: none;
-  }
-  section [id="banner"] p {
     display: none;
   }
   body [id="some-links"] {

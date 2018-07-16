@@ -19,124 +19,114 @@
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     
-    <script type="text/javascript">
-      $(function(){
-        console.log('jQuery: Page loading complete!');
-      });
-    </script>
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="../css/home.min.css">
-    
+    <link rel="stylesheet" href="../css/home_printer_style.min.css">
+
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-        <header>	
-            <div id="banner">
-                <div id="rgba">
-                    <div class="container">
-                        <br/><br/>
-                        <div class="row">
-                            <div class="col-xs-3 col-sm-3 col-md-2">
-                                <img alt="logo" src="../img/logo.png" />
-                            </div>
-                            <div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
-                                <h1>COMP1950</h1>
-                                <p>Web Development And Design 2</p>
-                            </div>
-                            <div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
-                                <ul>
-                                    <li><a href="http://www.bcit.ca/" target="_blank">BCIT</a></li>
-                                    <li><a href="http://learn.bcit.ca/" target="_blank">D2L</a></li>
-                                    <li><a href="http://my.bcit.ca/" target="_blank">MyBCIT</a></li>
-                                </ul>
-                            </div>
+    <script src="../js/home.js"></script>
+</head>
+<body>
+    <header>	
+        <div id="banner">
+            <div id="rgba">
+                <div class="container">
+                    <br/><br/>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-2">
+                            <img alt="logo" src="../img/logo.png" />
+                        </div>
+                        <div id="course-name" class="col-xs-6 col-sm-6 col-md-7">
+                            <h1>COMP 1950 Homepage</h1>
+                            <p>Web Development And Design 2</p>
+                        </div>
+                        <div id="some-links" class="col-xs-3 col-sm-3 col-md-3" role="navigation">
+                            <ul>
+                                <li><a href="http://www.bcit.ca/" target="_blank">BCIT</a></li>
+                                <li><a href="http://learn.bcit.ca/" target="_blank">D2L</a></li>
+                                <li><a href="http://my.bcit.ca/" target="_blank">MyBCIT</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="nav-div" class="bg-light">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="#"><img alt="logo" src="../img/logo2.png"></a>
-                        <button class="navbar-toggler" type="button"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li id="dropdown1" class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"    role="button" data-toggle="dropdown" aria-haspopup="true"         aria-expanded="false">
-                                    Lectures
-                                    </a>
-                                    <div id="menu-dropdown1" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Session 1</a>
-                                        <a class="dropdown-item" href="#">Session 2</a>
-                                        <a class="dropdown-item" href="#">Session 3</a>
-                                        <a class="dropdown-item" href="#">Session 4</a>
-                                        <a class="dropdown-item" href="#">Session 5</a>
-                                        <a class="dropdown-item" href="#">Session 6</a>
-                                        <a class="dropdown-item" href="#">Session 7</a>
-                                        <a class="dropdown-item" href="#">Session 8</a>
-                                        <a class="dropdown-item" href="#">Session 9</a>
-                                        <a class="dropdown-item" href="#">Session 10</a>
-                                        <a class="dropdown-item" href="#">Session 11</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Resources</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Useful Links</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                            <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </nav>
-                </div>
+        </div>
+        <div id="nav-div" class="bg-light">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="home.html"><img alt="logo" src="../img/logo2.png"></a>
+                    <button class="navbar-toggler" type="button"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li id="dropdown1" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"    role="button" data-toggle="dropdown" aria-haspopup="true"         aria-expanded="false">
+                                Lectures
+                                </a>
+                                <div id="menu-dropdown1" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Session 1</a>
+                                    <a class="dropdown-item" href="#">Session 2</a>
+                                    <a class="dropdown-item" href="#">Session 3</a>
+                                    <a class="dropdown-item" href="lecture04.html">Session 4</a>
+                                    <a class="dropdown-item" href="#">Session 5</a>
+                                    <a class="dropdown-item" href="#">Session 6</a>
+                                    <a class="dropdown-item" href="#">Session 7</a>
+                                    <a class="dropdown-item" href="#">Session 8</a>
+                                    <a class="dropdown-item" href="#">Session 9</a>
+                                    <a class="dropdown-item" href="#">Session 10</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="links.html">Useful Links</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
             </div>
-        </header>
+        </div>
+    </header>
 
     <div id="mc" class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-8">
+            <div id="not-aside" class="col-xs-12 col-md-8">
                 <div id="main-content">
                     <main>
                         <h2>COMP 1950</h2>
-                        <p>This hands-on course follows on from COMP 1850 Applied Web Development Level 1. Students who already understand HTML and CSS will explore web development in more depth with new topics and techniques. Participants will gain a deeper understanding of the latest technologies including HTML5 and CSS3 for developing web sites and applications. There is a focus on responsive design and mobile presentation through the use of Media Queries. Adding behavior to web sites using JavaScript frameworks such as jQuery is introduced. Labs and exercises focus on industry standard web development methodology.</p>
+                        <p>This hands-on course follows on from <a href="http://www.bcit.ca/study/courses/comp1850" target="_blank">COMP 1850</a> Applied Web Development Level 1. Students who already understand HTML and CSS will explore web development in more depth with new topics and techniques. Participants will gain a deeper understanding of the latest technologies including HTML5 and CSS3 for developing web sites and applications. There is a focus on responsive design and mobile presentation through the use of Media Queries. Adding behavior to web sites using JavaScript frameworks such as jQuery is introduced. Labs and exercises focus on industry standard web development methodology.</p>
         
-                        <p>COMP 1950 is a required course for the BCIT Computing Advanced Web Technologies associate certificates in Applied Web Development, AWD and Web and Mobile Application Development, WMA, as well as an elective in the CST Diploma. COMP 1950 and COMP 2015 are also the prerequisites for COMP 2052 Android and Mobile Application Development Tools. By the end of this course successful students will be able to build dynamic and semantically marked-up content providing Search Engine Optimized (SEO) pages.</p>
-        
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>                
+                        <p>COMP 1950 is a required course for the BCIT Computing Advanced Web Technologies associate certificates in Applied Web Development, AWD and Web and Mobile Application Development, WMA, as well as an elective in the CST Diploma.</p>
+                        
+                        <p>COMP 1950 and <a href="https://www.bcit.ca/study/courses/comp2015" target="_blank"> COMP 2015</a> are also the prerequisites for <a href="https://www.bcit.ca/study/courses/comp2052" target="_blank">COMP 2052</a> Android and Mobile Application Development Tools. By the end of this course successful students will be able to build dynamic and semantically marked-up content providing Search Engine Optimized (SEO) pages.</p>
+
+                        <p>Code validators:</p>              
                     </main>
                     <div id="btns" class="col-xs-12">
-                        <a class="div-button" href="#">
-                            Link 1
+                        <a class="div-button" href="https://validator.w3.org/" target="_blank">
+                            HTML
                         </a>
-                        <a class="div-button" href="#">
-                            Link 2
+                        <a class="div-button" href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                            CSS
                         </a>
-                        <a class="div-button" href="#">
-                            Link 3
+                        <a class="div-button" href="https://codebeautify.org/jsvalidate" target="_blank">
+                            Javascript
                         </a>
                     </div>
                     <br/><br/>
@@ -145,8 +135,8 @@
         
                 <div class="extra-content">
                     <div>
-                        <h2>Learning Outcomes</h2>
                         <section>
+                            <h2>Learning Outcomes</h2>
                             <p>Upon successful completion of this course, the student will be able to:</p>
                             <ul>
                                 <li>Mark up pages using latest HTML technologies, including HTML5.</li>
@@ -168,31 +158,38 @@
                 </div>
             </div>
         
-            <div class="col-xs-12 col-md-4">
+            <div id="aside" class="col-xs-12 col-md-4">
                 <aside>
                     <h3>Notice</h3>
                     <p>This website is for BCIT students of COMP 1950.</p>
-                    <p>Phasellus eu vulputate leo. Pellentesque condimentum ipsum sit amet erat sollicitudin accumsan. Quisque posuere nulla ullamcorper tortor laoreet commodo. Morbi tincidunt consectetur odio nec euismod.</p>
                     <p>You are in one of the following iterations:</p>
                     <ul>
                         <li>Tuesday</li>
                         <li>Thursday</li>
                         <li>Monday / Wednesday</li>
                     </ul>
-                    <p>Check the course catalogue at BCIT to see when this course is running next.</p>
+                    <p>Check the <a href="https://www.bcit.ca/study/courses/comp1950" target="_blank"> catalogue at course BCIT</a> to see when this course is running next.</p>
                 </aside>
             </div>
         </div>
 
+        
 
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div id="examples" class="extra-content">
                     <h3>Example of Outcomes</h3>
                     <section>
+                        <p>The COMP1950 introduces you to the dynamic behaviour of a website through use of javascript which is a client-side scripting language meant to be a powerfull programming language for dynamic behaviour (working with events). It has good libraries such as Jquery which improves readability by making you code less.</p>
+                        <p>Check out these examples...</p>
                         <h4>Carousel effect</h4>
                         <section>
-                            <p>Accomplished with css and javascript</p>
+                            <p>You can create slideshows with automatic switches of background. The time it takes to switch is measured in miliseconds</p>
+                            
+                            <!--
+                                The Carousel Effect starts here.
+                                Implemented by Gail
+                            -->
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -256,68 +253,59 @@
                                 </a>
                             </div>
                         </section>
-                        <h4>Example2</h4>
+                        <br/><br/><br/><br/>
+                        
+                        
                         <section>
-                            
+                            <h4>Example2</h4>
+                            <p>You can change CSS properties of HTML elements with click event</p>
+                            <div id="example2">
+                                <figure>
+                                    <figcaption id="caption">Theme 1</figcaption>
+                                    <img id="expand-image" alt="example 2" src="../img/nature.jpg" />
+                                </figure>
+                                <div>
+                                    <p class="my-btn" id="resize">Resize image</p>
+                                    <br/>
+                                    <p class="my-btn" id="change-theme">Change theme</p>
+                                </div>
+                            </div>
                         </section>
-                        <h4>Example3</h4>
+                        <br/><br/><br/><br/>
+                        
                         <section>
-                            
+                            <h4>Example3</h4>
+                            <p>You can create animations using click events. They can work simultaneously.</p>
+                            <div id="example3">
+                                <div>
+                                    <div id="preview">
+                                        <p id="pv-text">PREVIEW</p>
+                                    </div>
+                                </div>
+                                <div id="hovers">
+                                    <ul>
+                                        <li><p id="focus" class="my-btn">Focus text</p></li>
+                                        <li><p id="res-fast" class="my-btn">Resize fast</p></li>
+                                        <li><p id="res-slow" class="my-btn">Resize Slow</p></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </section>
                     </section>
                 </div>
+                
             </div>
         </div>
+    
+        <br/>
+        <a href="#" id="top" class="entypo-up-circled"></a>
+        <br/>
     </div>
+    <footer>
+        <p>Created by Bruno Lima, Gail Goncalves & James Wong. &copy; Spring 2018</p>
+    </footer>
     
-
-    
-    <div class="container">
-        <div class="row">
-            <footer class="col-md-12">
-                <p>Project Intro:</p>
-                <a href="intro.html">Intro</a>
-            </footer>
-        </div>
-    </div>
-    
-
-    <script>
-        $(document).ready(function(){
-            $('.navbar-toggler').click(function(){
-                $('#navbarSupportedContent').slideToggle();
-            });
-
-            var viewport = $(window).width();
-            $(window).resize(function(){
-                viewport = $(window).width();
-                console.log(viewport);
-            });
-            if(viewport >= 974.5){
-                $('#dropdown1').hover(function(){
-                    $('#menu-dropdown1').slideToggle();
-                });
-            } else {
-                $('#dropdown1').click(function(){
-                    $('#menu-dropdown1').slideToggle();
-                });
-            }
-
-            window.onscroll = function(){fixNav()};
-
-            var navbar = document.getElementById('nav-div');
-            var sticky = navbar.offsetTop;
-            function fixNav(){
-                if(window.pageYOffset >= sticky) {
-                    navbar.classList.add('sticky');
-                } else {
-                    navbar.classList.remove('sticky');
-                }
-            }
-            
-        });
-    </script>
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>

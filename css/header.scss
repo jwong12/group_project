@@ -28,36 +28,58 @@ h1{
     background-attachment: fixed;
     background-size: contain;
     position: relative;
+
     #rgba{
         background-color: rgba(0, 0, 0, .5);
         color: white;
         height: 100%;
     }
+
     #course-name{
         font-family: $titles-font;
         font-size: 2em;
     }
+
     #some-links{
         li{
             display: inline-block;
             margin-left: .5em;
         }
+
         a{
             color: $externalLinksHover;
             padding: .5em;
-            font-weight: 450;
+            font-weight: 500;
             border-bottom: .1em solid $externalLinksHover;
             @include transitions(.4s);
         }
+
         a:link, a:visited{
             color: $externalLinksFont;
         }
+
         a:hover{
-            font-weight: 450;
+            font-weight: 500;
             text-decoration: none;
             color: black;
             background-color: $externalLinksHover;
         }
+    }
+}
+
+nav{
+    .active{
+        font-weight: 600;
+    }
+
+    .form-control{
+        height:35px;
+        font-size: 14px;
+    }
+
+    .btn-outline-success{
+        height:35px;
+        padding: 0px 7px;
     }
 }
 
@@ -69,6 +91,7 @@ h1{
 
 #dropdown1{
     position: relative;    
+
     #menu-dropdown1{
         position: absolute;
         top: 2em;
@@ -77,6 +100,7 @@ h1{
 
 #more-dropdown2{
     position: relative;    
+
     #menu-dropdown2{
         position: absolute;
         top: 2em;
@@ -94,14 +118,17 @@ h1{
         li{
             margin-bottom: 1em;
             margin-right: 0;
-        }a{
+        }
+
+        a{
             padding: .1em;
         }
     }
     #banner{
         height: 17em;
+
         h1{
-            font-size: 2em;
+            font-size: 1.8em;
         }
     }
 }
@@ -109,19 +136,19 @@ h1{
     #banner{
         height: 14em;
         h1{
-            font-size: 1.5em;
+            font-size: 1.6em;
         }
         p{
             font-size: .8em;
         }
     }
 }
+
 @media screen and (max-width: 991px){
     #banner{
         #some-links{
             a{
-                background-color: $externalLinksHover;
-                padding: .2em;
+                padding: .3em;
             }
         }
     }
@@ -147,26 +174,36 @@ h1{
         }
         p{
             font-size: .5em;
-        }#some-links{
-            a{
-                background-color: $externalLinksHover;
-                padding: .2em;
-            }
 
-            a:hover{
-                font-weight: 550;
-            }
         }
     }
 }
+@media screen and (max-width: 769px){
+    #course-name{
+        padding:0px;
+    }
+
+    #banner{
+        h1{
+            margin-left:0px;
+            font-size: 1.3em;
+        }
+    }
+}
+
 
 @media screen and (max-width: 575px){
     #banner{
         background-size: unset;
         background-position-x: 90%;
+        max-height:180px;
+
         #course-name{
             position: absolute;
-            left: 3.5em;
+            left: 4em;
+            top: 2em;
+            min-width:450px;
+
             h1{
                 font-size: 1.1em;
             }
@@ -174,6 +211,7 @@ h1{
                 font-size: .5em;
             }
         }
+
         #some-links{
             position: absolute;
             top: 10px;

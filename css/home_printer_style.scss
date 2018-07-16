@@ -3,6 +3,10 @@
 */
 
 @media print{
+    header{
+        padding: 15px;
+    }
+
     h1, h2, h3, h4{
         break-after: avoid;
         color: black;
@@ -18,15 +22,8 @@
         text-decoration: underline;
     }
 
-    a[href^="http"]:after{
-        content: " (URL: " attr(href) ") ";   
-    }
-
     aside > h3{
         color: black;
-    }
-
-    section, aside {
     }
 
     body, .container, footer{
@@ -58,11 +55,8 @@
         display: none;
     }
 
-    .extra-content{
-        margin-top: -5em;
-    }
-
-    footer{
-        margin-top: -3em;
-    }
+    a[href^="http"]::after{
+		content:"URL:[" attr(href) "]";	
+		padding-top:10px !important;
+	}
 }

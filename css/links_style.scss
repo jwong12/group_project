@@ -20,9 +20,6 @@ $h2HeadingFontColor: #5D576B;
 $h3HeadingBgColor: $boxBgColor;
 $h3HeadingFontColor: #FFF;
 $darkColor: black;
-// $navBgColor: #b3d4fc;
-// $navHoverColor: lightpink;
-// $navFontColor: #5f530d;
 $footerFontColor: white;
 $footerBgColor: #555;
 
@@ -209,26 +206,37 @@ main{
     padding: 7px 10px;
 
 }
+
+#top_bookmark{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    
+    a{
+        text-decoration: none;
+        color: #1d80f7;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    a:hover{
+        color: #569ff7;
+    }
+}
+
 footer {
     text-align: center;
-    height: 60px;
-    background-color: #555;
-    padding: 7px 10px;
+    height: 50px;
+    font-size: 14px;
+    background-color: $footerBgColor;
+    color: $footerFontColor;
+    padding: 14px 10px;
 }
-    
-
-   
 
 footer p {
     padding: 0;
-    
     margin:0;
 }
-
-
-
-
-
 
 
 /* ==========================================================================
@@ -336,26 +344,17 @@ Print Attributes
 	nav{
 		display:none;
 	}
-	header{
-		display:none;
-	}
+
 	
 	footer{
 		display:none;
     }
-    p{
-        display:none;
-    }
+
 		
 	section [id="videos"]{
         display:none;
     }
-    section [id="banner"]{
-        p{
-            display:none;
-        }
-        
-    }
+
     body [id="some-links"]{
         display:none;
         						
@@ -369,8 +368,6 @@ Print Attributes
 		float: left !important;
 		padding-top:10px !important;
 	}
-	
-	
 }
 
 

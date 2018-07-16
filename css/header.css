@@ -39,7 +39,7 @@ h1 {
 #banner #some-links a {
   color: #abd2fa;
   padding: .5em;
-  font-weight: 450;
+  font-weight: 500;
   border-bottom: 0.1em solid #abd2fa;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -50,10 +50,24 @@ h1 {
 }
 
 #banner #some-links a:hover {
-  font-weight: 450;
+  font-weight: 500;
   text-decoration: none;
   color: black;
   background-color: #abd2fa;
+}
+
+nav .active {
+  font-weight: 600;
+}
+
+nav .form-control {
+  height: 35px;
+  font-size: 14px;
+}
+
+nav .btn-outline-success {
+  height: 35px;
+  padding: 0px 7px;
 }
 
 #nav-div {
@@ -97,7 +111,7 @@ h1 {
     height: 17em;
   }
   #banner h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
@@ -106,7 +120,7 @@ h1 {
     height: 14em;
   }
   #banner h1 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
   #banner p {
     font-size: .8em;
@@ -115,8 +129,7 @@ h1 {
 
 @media screen and (max-width: 991px) {
   #banner #some-links a {
-    background-color: #abd2fa;
-    padding: .2em;
+    padding: .3em;
   }
 }
 
@@ -139,12 +152,15 @@ h1 {
   #banner p {
     font-size: .5em;
   }
-  #banner #some-links a {
-    background-color: #abd2fa;
-    padding: .2em;
+}
+
+@media screen and (max-width: 769px) {
+  #course-name {
+    padding: 0px;
   }
-  #banner #some-links a:hover {
-    font-weight: 550;
+  #banner h1 {
+    margin-left: 0px;
+    font-size: 1.3em;
   }
 }
 
@@ -152,10 +168,13 @@ h1 {
   #banner {
     background-size: unset;
     background-position-x: 90%;
+    max-height: 180px;
   }
   #banner #course-name {
     position: absolute;
-    left: 3.5em;
+    left: 4em;
+    top: 2em;
+    min-width: 450px;
   }
   #banner #course-name h1 {
     font-size: 1.1em;

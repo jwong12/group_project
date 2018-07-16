@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Amaranth");
 @import url("http://weloveiconfonts.com/api/?family=entypo");
+@import url("header.css");
 /*
     Author: Bruno Lima
 */
@@ -7,13 +8,7 @@
   font-family: 'entypo', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: "Amaranth", sans-serif;
-  color: #5D576B;
-}
-
 h2 {
-  color: white;
   background-color: #8AC4FF;
   padding: .3em .5em;
 }
@@ -24,8 +19,8 @@ h3 {
   padding-left: .5em;
 }
 
-h1 {
-  font-size: 2em;
+h2, h3, h4, h5, h6 {
+  color: #5D576B;
 }
 
 ul {
@@ -41,79 +36,11 @@ a:hover {
   text-decoration: none;
 }
 
-#banner {
-  height: 20em;
-  width: 100%;
-  background-image: url("../img/home-banner3.jpg");
-  background-attachment: fixed;
-  background-size: contain;
-  position: relative;
-}
-
-#banner h1 {
-  color: white;
-}
-
-#banner #rgba {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  height: 100%;
-}
-
-#banner #course-name {
-  font-family: "Amaranth", sans-serif;
-  font-size: 2em;
-}
-
-#banner #some-links li {
-  display: inline-block;
-  margin-left: .5em;
-}
-
-#banner #some-links a {
-  color: white;
-  padding: .5em;
-  border-bottom: 0.1em solid #8AC4FF;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-#banner #some-links a:hover {
-  text-decoration: none;
-  background-color: #8AC4FF;
-  color: black;
-}
-
-#nav-div {
-  border-bottom: .1em solid lightgray;
-}
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-}
-
-#dropdown1 {
-  position: relative;
-}
-
-#dropdown1 #menu-dropdown1 {
-  position: absolute;
-  top: 2em;
-}
-
-#more-dropdown2 {
-  position: relative;
-}
-
-#more-dropdown2 #menu-dropdown2 {
-  position: absolute;
-  top: 2em;
 }
 
 #main-content, .extra-content {
@@ -148,12 +75,12 @@ main, aside {
 }
 
 aside {
-  background-color: #eafdf8;
+  background-color: #f2f2f2;
 }
 
 aside h3 {
   color: white;
-  background-color: #eb1919;
+  background-color: #910f2e;
   padding: .3em .5em;
   border: none;
 }
@@ -251,7 +178,8 @@ aside h3 {
 #examples #example2 figure {
   background-color: #8AC4FF;
   flex: 6;
-  padding: 1em;
+  padding: 10px;
+  margin: 0px;
   border-radius: .6em;
   -webkit-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 18px 6px -16px rgba(0, 0, 0, 0.8);
@@ -276,8 +204,8 @@ aside h3 {
 #examples #example2 figure figcaption {
   font-size: 2em;
   padding: .5m 3em;
+  margin-bottom: 5px;
   width: 4.5em;
-  float: right;
   text-align: center;
 }
 
@@ -358,43 +286,15 @@ aside h3 {
 }
 
 footer {
-  background-color: #505168;
-  padding: 1em;
+  text-align: center;
+  height: 50px;
+  font-size: 14px;
+  background-color: #555;
   color: white;
-}
-
-footer a {
-  color: white;
-  border: .1em solid white;
-  padding: .5em;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
-
-footer a:hover {
-  color: black;
-  background-color: white;
-  text-decoration: none;
+  padding: 14px 10px;
 }
 
 @media screen and (max-width: 1200px) {
-  #some-links li {
-    display: block;
-    margin-bottom: 1em;
-    margin-right: 0;
-  }
-  #some-links a {
-    padding: .1em;
-  }
-  #banner {
-    height: 17em;
-  }
-  #banner h1 {
-    font-size: 2em;
-  }
   #examples .carousel-item {
     height: 23em;
     background-size: contain;
@@ -408,50 +308,13 @@ footer a:hover {
   #examples .carousel-caption {
     bottom: 7.5em;
   }
-  #examples #example2 figure figcaption {
-    float: none;
-    margin-top: 1em;
-  }
-}
-
-@media screen and (max-width: 1015px) {
-  #banner {
-    height: 14em;
-  }
-  #banner h1 {
-    font-size: 1.5em;
-  }
-  #banner p {
-    font-size: .8em;
-  }
 }
 
 @media screen and (max-width: 991px) {
-  #banner #some-links a {
-    padding: .2em;
-  }
   #carouselExampleIndicators > div {
     height: 28em;
     padding: 0;
     margin-top: -5em;
-  }
-}
-
-@media screen and (max-width: 840px) {
-  #banner {
-    background-image: url("../img/home-banner-mini.jpg");
-    background-size: unset;
-    background-position-x: 100%;
-    background-attachment: fixed;
-  }
-  #banner h1 {
-    font-size: 1.5em;
-  }
-  #banner p {
-    font-size: .5em;
-  }
-  #banner #some-links a {
-    padding: .2em;
   }
 }
 
@@ -480,27 +343,6 @@ footer a:hover {
 }
 
 @media screen and (max-width: 575px) {
-  #banner {
-    background-image: url("../img/home-banner-mini.jpg");
-  }
-  #banner #course-name {
-    position: absolute;
-    left: 3.3em;
-  }
-  #banner #course-name h1 {
-    font-size: 1.1em;
-  }
-  #banner #course-name p {
-    font-size: .5em;
-  }
-  #banner #some-links {
-    position: absolute;
-    top: 0;
-    right: 1em;
-  }
-  #banner #some-links ul li {
-    display: inline-block;
-  }
   #carouselExampleIndicators > div {
     height: 25em;
     padding: 0;

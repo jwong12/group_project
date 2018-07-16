@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 
     /* Heading toggle and bookmark script */
-    $(".lecture_content").hide();
+    $(".lecture_content").addClass('hide')
     
     $(".box1").click(function (event){
         $("#section_css h2").next().slideToggle();

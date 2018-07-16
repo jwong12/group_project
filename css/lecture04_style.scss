@@ -131,7 +131,7 @@ textarea {
    ========================================================================== */
 #body_wrapper{
     background-color: $backgroundColor;
-    padding:20px 15px;
+    padding:10px 15px;
     max-width: 1024px;
     margin: auto;
 }
@@ -402,6 +402,8 @@ main{
     }
 }
 
+.hide{display:none;}
+
 #section_box_model{
     code{
         @include codeArea($codeAreaBgColor);
@@ -412,21 +414,29 @@ main{
     margin:10px;
 }
 
+#top_bookmark{
+    text-align: center;
+    margin: 0;
+    
+    a{
+        text-decoration: none;
+        color: #1d80f7;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    a:hover{
+        color: #569ff7;
+    }
+}
+
 footer{
     text-align: center;
-    height: 40px;
+    height: 50px;
+    font-size: 14px;
     background-color: $footerBgColor;
-    padding: 7px 10px;
-
-    a:link{
-        text-decoration: none;
-        font-size: 13px;
-        color: $footerFontColor;
-    }
-
-    a:visited{
-        color: $footerFontColor;
-    }
+    color: $footerFontColor;
+    padding: 14px 10px;
 }
 
 
@@ -520,11 +530,67 @@ footer{
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media print{
+    header{
+        padding: 15px;
+    }
+
+	h1, h2, h3, h4{
+        color: black;
+        page-break-after: avoid;
+    }
+
+    section h2{
+        page-break-after: avoid;
+    }
+
+    a:link, a:visited {
+        color: #330099;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    a{
+        text-decoration: underline;
+    }
+
+    a[href^="http"]:after{
+        content: " (URL: " attr(href) ") ";   
+    }
+
+    aside > h3{
+        color: black;
+    }
+
+    body, .container, footer{
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        color: black;
+    }
+
+    .hide{
+        display:block;
+    }
+
+    #container_boxes, #some-links, fieldset, .svg_wrapper, .item_box, #section_flex_container, #section_grid_container, .svg_wrapper{
+        display: none;
+    }
+
+    footer > p, footer > a{
+        display: none;
+    }
+
+    footer{
+        margin-top: -3em;
+    }
+
+    a[href^="http"]::after{
+		content:"URL:[" attr(href) "]";	
+		padding-top:10px !important;
+	}
 }
 
 @media (max-width: 1000px) {
